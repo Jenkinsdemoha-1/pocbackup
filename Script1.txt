@@ -1,0 +1,51 @@
+Script of http://35.223.194.44:8080/job/RestoreBackup/configure
+
+import groovy.io.* 
+dlist=[]
+new File("/backup").eachDir {dlist << it.name}
+dlist.sort()
+if(dlist.size()==0)
+  return ["No Backups found"]
+else
+  return dlist.reverse()
+
+
+sudo crontab -l
+sudo crontab -r
+echo "Cleaning jenkins"
+sudo rm -rf /mnt/jenkinsbackup/*
+echo "Cleaning Completed"
+echo "Restoring backup ${BackupFolders}"
+sudo cp -af /backup/${BackupFolders}/* /mnt/jenkinsbackup/
+echo "Restoring Done"
+
+#!/bin/sh
+server=`cat /opt/initialise.sh | head -1 | cut -d'=' -f2 | awk '{gsub("http://|/|:.*","")}1'`
+ssh jenkinsdemoha@$server "sudo systemctl restart jenkins"
+
+echo "======================Checking Status of JENKINS.....====================="
+count=0
+while [ "$count" -ne 6 ]
+do
+ response=$(curl -s -o /dev/null -w "%{http_code}\n" -u 'admin:11f10b8fd29e1c1f0fb14c7f1e74dbd158' http://104.197.197.188/)
+ echo "Status: $response"
+ if [ "$response" != "200" ]
+ then
+  sleep 5
+  count=`expr $count + 1` 
+ else
+  break
+ fi
+done
+echo "$count"
+if [ "$count" -eq 6 ]
+then
+ echo "===================Jenkins did not start within time======================"
+ exit 1
+else
+ echo "======================JENKINS server is UP==========================="
+fi
+
+
+sudo crontab /opt/cron.txt
+sudo crontab -l

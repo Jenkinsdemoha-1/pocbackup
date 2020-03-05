@@ -1,0 +1,48 @@
+Script of http://35.223.194.44:8080/job/Backup/configure
+
+
+echo "Taking Backup to Test Jenkins"
+
+ssh jenkinsdemoha@104.197.197.188 << EOF
+sudo rm -rf /var/lib/jenkins/* 
+sudo cp -af /mnt/jenkins/* /var/lib/jenkins/
+sudo service jenkins restart
+EOF
+
+
+#!/bin/sh
+echo "======================Checking Status of Test JENKINS.....====================="
+count=0
+while [ "$count" -ne 20 ]
+do
+ response=$(curl -s -o /dev/null -w "%{http_code}" -u 'admin:11f10b8fd29e1c1f0fb14c7f1e74dbd158' 'http://104.197.197.188:8080/')
+# echo "Status: $response"
+ if [ "$response" != "200" ]
+ then
+  sleep 5
+  count=`expr $count + 1` 
+ else
+  break
+ fi
+done
+echo "$count"
+if [ "$count" -eq 20 ]
+then
+ echo "===================Jenkins did not start within time======================"
+ exit 1
+else
+ echo "======================JENKINS server is UP==========================="
+fi
+
+
+wget http://104.197.197.188:8080/jnlpJars/jenkins-cli.jar
+java -jar jenkins-cli.jar -s http://104.197.197.188:8080/ -auth 'admin:11f10b8fd29e1c1f0fb14c7f1e74dbd158' build 'testingclitrigger' -s
+echo "Validation Complete"
+
+time_stamp=$(date +%Y-%m-%d-%T)
+backuppath="/backup"
+mkdir -p "${backuppath}/${time_stamp}"
+echo "Backup folder created at ${backuppath}/${time_stamp}"
+
+sudo cp -af /mnt/jenkinsbackup/* "${backuppath}/${time_stamp}/"
+echo "Backup Completed"
