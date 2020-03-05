@@ -1,0 +1,14 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<slave>
+  <name>slave1</name>
+  <description></description>
+  <remoteFS>/tmp/jenkins</remoteFS>
+  <numExecutors>1</numExecutors>
+  <mode>NORMAL</mode>
+  <retentionStrategy class="hudson.slaves.RetentionStrategy$Always"/>
+  <launcher class="hudson.slaves.CommandLauncher" plugin="command-launcher@1.4">
+    <agentCommand>ssh jenkinsdemoha@104.197.197.188 java -jar ~/slave.jar</agentCommand>
+  </launcher>
+  <label>mavenslave</label>
+  <nodeProperties/>
+</slave>

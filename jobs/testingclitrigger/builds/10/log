@@ -1,0 +1,48 @@
+Started by user [8mha:////4NAIeWxch3PlsV4gVPr2IPhNBMRxvnsvVfrv6y5oPBc6AAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0mintel
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/testingclitrigger
+[WS-CLEANUP] Deleting project workspace...
+[WS-CLEANUP] Deferred wipeout is used...
+[WS-CLEANUP] Done
+No credentials specified
+Cloning the remote Git repository
+Cloning repository https://github.com/gabrielf/maven-samples.git
+ > git init /var/lib/jenkins/workspace/testingclitrigger # timeout=10
+ERROR: Error cloning remote repo 'origin'
+hudson.plugins.git.GitException: Could not init /var/lib/jenkins/workspace/testingclitrigger
+	at org.jenkinsci.plugins.gitclient.CliGitAPIImpl$5.execute(CliGitAPIImpl.java:989)
+	at org.jenkinsci.plugins.gitclient.CliGitAPIImpl$2.execute(CliGitAPIImpl.java:747)
+	at hudson.plugins.git.GitSCM.retrieveChanges(GitSCM.java:1114)
+	at hudson.plugins.git.GitSCM.checkout(GitSCM.java:1159)
+	at hudson.scm.SCM.checkout(SCM.java:505)
+	at hudson.model.AbstractProject.checkout(AbstractProject.java:1205)
+	at hudson.model.AbstractBuild$AbstractBuildExecution.defaultCheckout(AbstractBuild.java:574)
+	at jenkins.scm.SCMCheckoutStrategy.checkout(SCMCheckoutStrategy.java:86)
+	at hudson.model.AbstractBuild$AbstractBuildExecution.run(AbstractBuild.java:499)
+	at hudson.model.Run.execute(Run.java:1853)
+	at hudson.model.FreeStyleBuild.run(FreeStyleBuild.java:43)
+	at hudson.model.ResourceController.execute(ResourceController.java:97)
+	at hudson.model.Executor.run(Executor.java:427)
+Caused by: hudson.plugins.git.GitException: Error performing git command: git init /var/lib/jenkins/workspace/testingclitrigger
+	at org.jenkinsci.plugins.gitclient.CliGitAPIImpl.launchCommandIn(CliGitAPIImpl.java:2436)
+	at org.jenkinsci.plugins.gitclient.CliGitAPIImpl.launchCommandIn(CliGitAPIImpl.java:2359)
+	at org.jenkinsci.plugins.gitclient.CliGitAPIImpl.launchCommandIn(CliGitAPIImpl.java:2355)
+	at org.jenkinsci.plugins.gitclient.CliGitAPIImpl.launchCommand(CliGitAPIImpl.java:1915)
+	at org.jenkinsci.plugins.gitclient.CliGitAPIImpl$5.execute(CliGitAPIImpl.java:987)
+	... 12 more
+Caused by: java.io.IOException: Cannot run program "git" (in directory "/var/lib/jenkins/workspace/testingclitrigger"): error=2, No such file or directory
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1048)
+	at hudson.Proc$LocalProc.<init>(Proc.java:250)
+	at hudson.Proc$LocalProc.<init>(Proc.java:219)
+	at hudson.Launcher$LocalLauncher.launch(Launcher.java:937)
+	at hudson.Launcher$ProcStarter.start(Launcher.java:455)
+	at org.jenkinsci.plugins.gitclient.CliGitAPIImpl.launchCommandIn(CliGitAPIImpl.java:2422)
+	... 16 more
+Caused by: java.io.IOException: error=2, No such file or directory
+	at java.lang.UNIXProcess.forkAndExec(Native Method)
+	at java.lang.UNIXProcess.<init>(UNIXProcess.java:247)
+	at java.lang.ProcessImpl.start(ProcessImpl.java:134)
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1029)
+	... 21 more
+ERROR: Error cloning remote repo 'origin'
+Finished: FAILURE

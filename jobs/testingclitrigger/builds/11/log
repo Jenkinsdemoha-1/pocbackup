@@ -1,0 +1,30 @@
+Started by user [8mha:////4NAIeWxch3PlsV4gVPr2IPhNBMRxvnsvVfrv6y5oPBc6AAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0mintel
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/testingclitrigger
+[WS-CLEANUP] Deleting project workspace...
+[WS-CLEANUP] Deferred wipeout is used...
+[WS-CLEANUP] Done
+No credentials specified
+Cloning the remote Git repository
+Cloning repository https://github.com/gabrielf/maven-samples.git
+ > git init /var/lib/jenkins/workspace/testingclitrigger # timeout=10
+Fetching upstream changes from https://github.com/gabrielf/maven-samples.git
+ > git --version # timeout=10
+ > git fetch --tags --progress -- https://github.com/gabrielf/maven-samples.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url https://github.com/gabrielf/maven-samples.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url https://github.com/gabrielf/maven-samples.git # timeout=10
+Fetching upstream changes from https://github.com/gabrielf/maven-samples.git
+ > git fetch --tags --progress -- https://github.com/gabrielf/maven-samples.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision 4d47c7d9bd4ca5ea765d78c76020dd71cf133e8b (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 4d47c7d9bd4ca5ea765d78c76020dd71cf133e8b # timeout=10
+Commit message: "Merge pull request #1 from narendra2244/patch-1"
+ > git rev-list --no-walk 4d47c7d9bd4ca5ea765d78c76020dd71cf133e8b # timeout=10
+[testingclitrigger] $ /bin/sh -xe /tmp/jenkins6800450115750897964.sh
++ mvn clean package
+/tmp/jenkins6800450115750897964.sh: 2: /tmp/jenkins6800450115750897964.sh: mvn: not found
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE
