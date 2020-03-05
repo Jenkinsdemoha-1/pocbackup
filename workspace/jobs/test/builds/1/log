@@ -1,0 +1,30 @@
+Started by user [8mha:////4Nw2w4KL9NeMiRb1nl0H9jz7+tOgqAKaQPnG6rMPhAH0AAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/test
+No credentials specified
+Cloning the remote Git repository
+Cloning repository https://github.com/prathish2503/SVNrepo.git
+ > git init /var/lib/jenkins/workspace/test # timeout=10
+Fetching upstream changes from https://github.com/prathish2503/SVNrepo.git
+ > git --version # timeout=10
+ > git fetch --tags --progress https://github.com/prathish2503/SVNrepo.git +refs/heads/*:refs/remotes/PR/* # timeout=10
+ > git config remote.PR.url https://github.com/prathish2503/SVNrepo.git # timeout=10
+ > git config --add remote.PR.fetch +refs/heads/*:refs/remotes/PR/* # timeout=10
+ > git config remote.PR.url https://github.com/prathish2503/SVNrepo.git # timeout=10
+Fetching upstream changes from https://github.com/prathish2503/SVNrepo.git
+ > git fetch --tags --progress https://github.com/prathish2503/SVNrepo.git +refs/pull/*:refs/remotes/origin/pr/* # timeout=10
+Seen branch in repository PR/master
+Seen branch in repository PR/new
+Seen branch in repository origin/pr/1/head
+Seen branch in repository origin/pr/1/merge
+Seen 4 remote branches
+ > git show-ref --tags -d # timeout=10
+Checking out Revision aadd5e987e655d7938078747242b0dea059de684 (origin/pr/1/merge)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f aadd5e987e655d7938078747242b0dea059de684 # timeout=10
+Commit message: "Merge 086946bc63e0326d9dac11805e6eb0593751fb6b into 6e5e3fa6c4f3bfc7fc0858c4bd8f82079aa83aec"
+First time build. Skipping changelog.
+[test] $ /bin/sh -xe /tmp/jenkins7204555666338302460.sh
++ echo 'Hello world'
+Hello world
+Finished: SUCCESS

@@ -1,0 +1,94 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<flow-definition plugin="workflow-job@2.36">
+  <actions/>
+  <description></description>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <com.sonyericsson.rebuild.RebuildSettings plugin="rebuild@1.31">
+      <autoRebuild>false</autoRebuild>
+      <rebuildDisabled>false</rebuildDisabled>
+    </com.sonyericsson.rebuild.RebuildSettings>
+    <hudson.model.ParametersDefinitionProperty>
+      <parameterDefinitions>
+        <hudson.model.StringParameterDefinition>
+          <name>repo</name>
+          <description></description>
+          <defaultValue></defaultValue>
+          <trim>false</trim>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>commitid</name>
+          <description></description>
+          <defaultValue></defaultValue>
+          <trim>false</trim>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>pr</name>
+          <description></description>
+          <defaultValue></defaultValue>
+          <trim>false</trim>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>branch</name>
+          <description></description>
+          <defaultValue></defaultValue>
+          <trim>false</trim>
+        </hudson.model.StringParameterDefinition>
+      </parameterDefinitions>
+    </hudson.model.ParametersDefinitionProperty>
+  </properties>
+  <definition class="org.jenkinsci.plugins.workflow.cps.CpsFlowDefinition" plugin="workflow-cps@2.78">
+    <script>import groovy.json.JsonSlurper
+node(){
+    try{
+        
+        print pr
+        env.pr=pr
+        print commitid
+        env.repo=repo
+        print repo
+        print branch
+        stage(&apos;Checkout&apos;){
+            checkout changelog: false, poll: false, scm: [$class: &apos;GitSCM&apos;, branches: [[name: &quot;$branch&quot;]], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: &apos;36686a20-adb7-47ac-999f-4e5c2d9a3dbe&apos;, url: &quot;http://35.223.53.23:7990/scm/JEN/&quot;+repo+&quot;.git&quot;]]]
+        }
+        stage(&apos;Copy Files&apos;){
+            def json = sh label: &apos;&apos;, returnStdout: true, 
+                        script: &apos;&apos;&apos;json=$(curl -k -u admin:admin http://35.223.53.23:7990/rest/api/latest/projects/JEN/repos/$repo/pull-requests/$pr/changes?limit=1000)
+                        echo &quot;$json&quot; &gt; test.json&apos;&apos;&apos;
+            json=readJSON file: &apos;test.json&apos;
+            //def slurper = new JsonSlurper()
+            //def result = slurper.parseText(json)
+            def list = json.get(&quot;values&quot;)
+            def list_files= []
+            //print list
+            for (int i=0;i&lt;list.size();i++){
+                def val = list[i].get(&quot;path&quot;)
+                if(!list_files.contains(val.get(&quot;toString&quot;)))
+                    list_files.add(val.get(&quot;toString&quot;))
+            }
+            
+            print &quot;===============================================&quot;
+            print list_files
+            env.list_files=list_files
+        	for(int j=0;j&lt;list_files.size();j++){
+        		env.file=list_files[j]
+        		sh&apos;&apos;&apos;
+        			sudo cp -rfv --parent $file /mnt/jenkinsbackup/
+        		&apos;&apos;&apos;
+        	}
+        }
+        deleteDir()
+        currentBuild.result = &apos;SUCCESS&apos;
+    }catch(err) {
+        currentBuild.result = &apos;FAILED&apos;      
+    }
+    stage(&apos;Notify&apos;){
+        notifyBitbucket commitSha1: &apos;&apos;, considerUnstableAsSuccess: false, credentialsId: &apos;36686a20-adb7-47ac-999f-4e5c2d9a3dbe&apos;, disableInprogressNotification: false, ignoreUnverifiedSSLPeer: true, includeBuildNumberInKey: false, prependParentProjectKey: false, projectKey: &apos;&apos;, stashServerBaseUrl: &apos;http://35.223.53.23:7990&apos;
+    }
+}</script>
+    <sandbox>true</sandbox>
+  </definition>
+  <triggers/>
+  <authToken>12345</authToken>
+  <disabled>false</disabled>
+</flow-definition>

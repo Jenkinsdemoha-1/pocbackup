@@ -1,0 +1,16 @@
+Started by user [8mha:////4Nw2w4KL9NeMiRb1nl0H9jz7+tOgqAKaQPnG6rMPhAH0AAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/Backup
+[Backup] $ /bin/sh -xe /tmp/jenkins3332038088019114290.sh
++ echo 'Taking Backup'
+Taking Backup
+++ date +%Y-%m-%d-%T
++ time_stamp=2020-01-30-09:04:45
++ backuppath=/backup
++ mkdir -p /backup/2020-01-30-09:04:45
++ echo 'Backup folder created at /backup/2020-01-30-09:04:45'
+Backup folder created at /backup/2020-01-30-09:04:45
++ sudo cp -af /mnt/jenkinsbackup/com.cloudbees.hudson.plugins.folder.config.AbstractFolderConfiguration.xml /mnt/jenkinsbackup/config.xml /mnt/jenkinsbackup/hudson.model.UpdateCenter.xml /mnt/jenkinsbackup/hudson.plugins.emailext.ExtendedEmailPublisher.xml /mnt/jenkinsbackup/hudson.plugins.git.GitTool.xml /mnt/jenkinsbackup/identity.key.enc /mnt/jenkinsbackup/jenkins.install.InstallUtil.lastExecVersion /mnt/jenkinsbackup/jenkins.install.UpgradeWizard.state /mnt/jenkinsbackup/jenkins.model.JenkinsLocationConfiguration.xml /mnt/jenkinsbackup/jenkins.telemetry.Correlator.xml /mnt/jenkinsbackup/jobs /mnt/jenkinsbackup/logs /mnt/jenkinsbackup/nodeMonitors.xml /mnt/jenkinsbackup/nodes /mnt/jenkinsbackup/plugins /mnt/jenkinsbackup/queue.xml.bak /mnt/jenkinsbackup/secret.key /mnt/jenkinsbackup/secret.key.not-so-secret /mnt/jenkinsbackup/secrets /mnt/jenkinsbackup/updates /mnt/jenkinsbackup/userContent /mnt/jenkinsbackup/users /mnt/jenkinsbackup/workflow-libs /backup/2020-01-30-09:04:45/
++ echo 'Backup Completed'
+Backup Completed
+Finished: SUCCESS

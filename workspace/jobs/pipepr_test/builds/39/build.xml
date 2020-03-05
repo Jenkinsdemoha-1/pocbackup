@@ -1,0 +1,181 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<flow-build plugin="workflow-job@2.36">
+  <actions>
+    <hudson.model.CauseAction>
+      <causeBag class="linked-hash-map">
+        <entry>
+          <hudson.model.Cause_-RemoteCause>
+            <addr>35.223.53.23</addr>
+          </hudson.model.Cause_-RemoteCause>
+          <int>1</int>
+        </entry>
+        <entry>
+          <hudson.model.Cause_-UserIdCause>
+            <userId>admin</userId>
+          </hudson.model.Cause_-UserIdCause>
+          <int>1</int>
+        </entry>
+        <entry>
+          <com.sonyericsson.rebuild.RebuildCause plugin="rebuild@1.31">
+            <upstreamProject>pipepr_test</upstreamProject>
+            <upstreamUrl>job/pipepr_test/</upstreamUrl>
+            <upstreamBuild>38</upstreamBuild>
+            <upstreamCauses>
+              <hudson.model.Cause_-RemoteCause reference="../../../../entry/hudson.model.Cause_-RemoteCause"/>
+              <hudson.model.Cause_-UserIdCause>
+                <userId>admin</userId>
+              </hudson.model.Cause_-UserIdCause>
+              <hudson.model.Cause_-UpstreamCause>
+                <upstreamProject>pipepr_test</upstreamProject>
+                <upstreamUrl>job/pipepr_test/</upstreamUrl>
+                <upstreamBuild>37</upstreamBuild>
+                <upstreamCauses>
+                  <hudson.model.Cause_-RemoteCause reference="../../../../../../entry/hudson.model.Cause_-RemoteCause"/>
+                  <hudson.model.Cause_-UserIdCause>
+                    <userId>admin</userId>
+                  </hudson.model.Cause_-UserIdCause>
+                  <hudson.model.Cause_-UpstreamCause>
+                    <upstreamProject>pipepr_test</upstreamProject>
+                    <upstreamUrl>job/pipepr_test/</upstreamUrl>
+                    <upstreamBuild>36</upstreamBuild>
+                    <upstreamCauses>
+                      <hudson.model.Cause_-RemoteCause reference="../../../../../../../../entry/hudson.model.Cause_-RemoteCause"/>
+                    </upstreamCauses>
+                  </hudson.model.Cause_-UpstreamCause>
+                </upstreamCauses>
+              </hudson.model.Cause_-UpstreamCause>
+            </upstreamCauses>
+          </com.sonyericsson.rebuild.RebuildCause>
+          <int>1</int>
+        </entry>
+      </causeBag>
+    </hudson.model.CauseAction>
+    <hudson.model.ParametersAction>
+      <safeParameters class="sorted-set"/>
+      <parameters>
+        <hudson.model.StringParameterValue>
+          <name>repo</name>
+          <description></description>
+          <value>jenkindemo1</value>
+        </hudson.model.StringParameterValue>
+        <hudson.model.StringParameterValue>
+          <name>commitid</name>
+          <description></description>
+          <value>b01f9d6db6941602ad8b4dba24f559f52e14921c</value>
+        </hudson.model.StringParameterValue>
+        <hudson.model.StringParameterValue>
+          <name>pr</name>
+          <description></description>
+          <value>5</value>
+        </hudson.model.StringParameterValue>
+        <hudson.model.StringParameterValue>
+          <name>branch</name>
+          <description></description>
+          <value>develop</value>
+        </hudson.model.StringParameterValue>
+      </parameters>
+      <parameterDefinitionNames>
+        <string>repo</string>
+        <string>commitid</string>
+        <string>pr</string>
+        <string>branch</string>
+      </parameterDefinitionNames>
+    </hudson.model.ParametersAction>
+    <org.jenkinsci.plugins.workflow.libs.LibrariesAction plugin="workflow-cps-global-lib@2.15">
+      <libraries/>
+    </org.jenkinsci.plugins.workflow.libs.LibrariesAction>
+    <org.jenkinsci.plugins.workflow.cps.EnvActionImpl plugin="workflow-cps@2.78">
+      <env class="tree-map"/>
+    </org.jenkinsci.plugins.workflow.cps.EnvActionImpl>
+    <com.sonyericsson.rebuild.RebuildAction plugin="rebuild@1.31"/>
+  </actions>
+  <queueId>108</queueId>
+  <timestamp>1579691696598</timestamp>
+  <startTime>1579691696602</startTime>
+  <result>FAILURE</result>
+  <duration>390</duration>
+  <charset>UTF-8</charset>
+  <keepLog>false</keepLog>
+  <execution class="org.jenkinsci.plugins.workflow.cps.CpsFlowExecution">
+    <result>SUCCESS</result>
+    <script>import groovy.json.JsonSlurper
+node(){
+    try{
+        hello
+        print pr
+        env.pr=pr
+        print commitid
+        env.repo=repo
+        print repo
+        print branch
+        //http://35.223.53.23:7990/rest/api/latest/projects/DEM/repos/jenkinspr/pull-requests/1/changes
+        def json = sh label: &apos;&apos;, returnStdout: true, 
+                    script: &apos;&apos;&apos;json=$(curl -k -u admin:admin http://35.223.53.23:7990/rest/api/latest/projects/JEN/repos/$repo/pull-requests/$pr/changes?limit=1000)
+                    echo &quot;$json&quot; &gt; test.json&apos;&apos;&apos;
+        json=readJSON file: &apos;test.json&apos;
+        //def slurper = new JsonSlurper()
+        //def result = slurper.parseText(json)
+        def list = json.get(&quot;values&quot;)
+        def list_files= []
+        //print list
+        for (int i=0;i&lt;list.size();i++){
+            def val = list[i].get(&quot;path&quot;)
+            if(!list_files.contains(val.get(&quot;toString&quot;)))
+                list_files.add(val.get(&quot;toString&quot;))
+        }
+        
+        print &quot;===============================================&quot;
+        print list_files
+        env.list_files=list_files
+        stage(&apos;Checkout&apos;){
+            checkout changelog: false, poll: false, scm: [$class: &apos;GitSCM&apos;, branches: [[name: &quot;$branch&quot;]], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: &apos;36686a20-adb7-47ac-999f-4e5c2d9a3dbe&apos;, url: &quot;http://35.223.53.23:7990/scm/JEN/&quot;+repo+&quot;.git&quot;]]]
+        }
+        stage(&apos;Copy Files&apos;){
+        	for(int j=0;j&lt;list_files.size();j++){
+        		env.file=list_files[j]
+        		sh&apos;&apos;&apos;
+        			sudo cp -rfv --parent $file /mnt/jenkinsbackup/
+        		&apos;&apos;&apos;
+        	}
+        }
+        deleteDir()
+        currentBuild.result = &apos;SUCCESS&apos;
+    }catch(err) {
+        currentBuild.result = &apos;FAILED&apos;      
+    }
+    notifyBitbucket commitSha1: &apos;&apos;, considerUnstableAsSuccess: false, credentialsId: &apos;36686a20-adb7-47ac-999f-4e5c2d9a3dbe&apos;, disableInprogressNotification: false, ignoreUnverifiedSSLPeer: true, includeBuildNumberInKey: false, prependParentProjectKey: false, projectKey: &apos;&apos;, stashServerBaseUrl: &apos;http://35.223.53.23:7990&apos;
+    
+}</script>
+    <loadedScripts class="map"/>
+    <durabilityHint>MAX_SURVIVABILITY</durabilityHint>
+    <timings class="map">
+      <entry>
+        <string>flowNode</string>
+        <long>114483897</long>
+      </entry>
+      <entry>
+        <string>classLoad</string>
+        <long>18221129</long>
+      </entry>
+      <entry>
+        <string>run</string>
+        <long>165408321</long>
+      </entry>
+      <entry>
+        <string>parse</string>
+        <long>85203895</long>
+      </entry>
+      <entry>
+        <string>saveProgram</string>
+        <long>13549142</long>
+      </entry>
+    </timings>
+    <sandbox>true</sandbox>
+    <iota>8</iota>
+    <head>1:8</head>
+    <done>true</done>
+    <resumeBlocked>false</resumeBlocked>
+  </execution>
+  <completed>true</completed>
+  <checkouts class="hudson.util.PersistedList"/>
+</flow-build>

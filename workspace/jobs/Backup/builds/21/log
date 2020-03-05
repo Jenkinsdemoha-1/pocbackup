@@ -1,0 +1,13 @@
+Started by user [8mha:////4Nw2w4KL9NeMiRb1nl0H9jz7+tOgqAKaQPnG6rMPhAH0AAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/Backup
+[Backup] $ /bin/sh -xe /tmp/jenkins5280149743969436570.sh
++ echo Taking Backup
+Taking Backup
++ date +%Y-%m-%d-%T
++ time_stamp=2020-03-02-13:42:16
++ backuppath=/backup
++ mkdir -p /backup/2020-03-02-13:42:16
+mkdir: cannot create directory ‘/backup’: Permission denied
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE

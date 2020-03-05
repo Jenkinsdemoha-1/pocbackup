@@ -1,0 +1,8 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<org.jenkinsci.plugins.stashNotifier.StashNotifier_-DescriptorImpl plugin="stashNotifier@1.20">
+  <considerUnstableAsSuccess>false</considerUnstableAsSuccess>
+  <disableInprogressNotification>false</disableInprogressNotification>
+  <ignoreUnverifiedSsl>false</ignoreUnverifiedSsl>
+  <includeBuildNumberInKey>false</includeBuildNumberInKey>
+  <prependParentProjectKey>false</prependParentProjectKey>
+</org.jenkinsci.plugins.stashNotifier.StashNotifier_-DescriptorImpl>

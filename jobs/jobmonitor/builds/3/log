@@ -1,0 +1,9 @@
+Started by user [8mha:////4Nw2w4KL9NeMiRb1nl0H9jz7+tOgqAKaQPnG6rMPhAH0AAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/jobmonitor
+[jobmonitor] $ /bin/sh -xe /tmp/jenkins7539699319028510892.sh
+++ curl -s -o /dev/null -w '%{http_code}' http://34.107.220.208/
++ =200
+/tmp/jenkins7539699319028510892.sh: line 2: =200: command not found
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE

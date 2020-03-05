@@ -1,0 +1,15 @@
+Started by user [8mha:////4Nw2w4KL9NeMiRb1nl0H9jz7+tOgqAKaQPnG6rMPhAH0AAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/RestoreBackup
+[RestoreBackup] $ /bin/sh -xe /tmp/jenkins7055385969698997821.sh
++ echo 'Cleaning jenkins'
+Cleaning jenkins
++ rm -rf /mnt/jenkinsbackup/logs /mnt/jenkinsbackup/plugins
++ echo 'Cleaning Completed'
+Cleaning Completed
++ echo 'Restoring backup 2020-01-20-10:38:21'
+Restoring backup 2020-01-20-10:38:21
++ cp -rf '/backup/2020-01-20-10:38:21/*' /mnt/jenkinsbackup/
+cp: cannot stat ‘/backup/2020-01-20-10:38:21/*’: No such file or directory
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE

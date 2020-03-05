@@ -1,0 +1,15 @@
+Started by user [8mha:////4Nw2w4KL9NeMiRb1nl0H9jz7+tOgqAKaQPnG6rMPhAH0AAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/RestoreBackup
+[RestoreBackup] $ /bin/sh -xe /tmp/jenkins4124122049901376826.sh
++ echo 'Cleaning jenkins'
+Cleaning jenkins
++ sudo rm -rf /mnt/jenkinsbackup/jenkins /mnt/jenkinsbackup/lost+found
++ echo 'Cleaning Completed'
+Cleaning Completed
++ echo 'Restoring backup 2020-01-30-07:14:15'
+Restoring backup 2020-01-30-07:14:15
++ sudo cp -rf /backup/2020-01-30-07:14:15/jenkins /mnt/jenkinsbackup/.
++ echo 'Restoring Done'
+Restoring Done
+Finished: SUCCESS

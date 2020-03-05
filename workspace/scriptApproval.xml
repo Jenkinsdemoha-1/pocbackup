@@ -1,0 +1,29 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<scriptApproval plugin="script-security@1.69">
+  <approvedScriptHashes>
+    <string>017d0db438428731cd600b6ebda805065433520f</string>
+    <string>285739ff1e0a84601694c4619ca4bfac1a357ad8</string>
+    <string>2b66d818f999c1806378ba84443c8f85e9b0eb88</string>
+    <string>3cf60f15f8f125325ee2de077bec3f093b40e3e2</string>
+    <string>65c053d2e4af66ae330148d9cb2382704533b8ee</string>
+    <string>75adfc4b1b9c1f86337cf06d14f0f73e56946001</string>
+    <string>c99a6196c2ae126115e827320215986909d728fb</string>
+    <string>cf32819c4e2f39733413a3ab7ee04faa963d3a75</string>
+    <string>df0ae8fd3128bdb98a7b73740687753e6e183b48</string>
+    <string>e1a4b59e0ff3c1820c57b8683ece202d44fd9914</string>
+    <string>ff7aed00d8710fef457ada80568b7fbf20954845</string>
+    <string>ffa1e7b378df33520a6be4019a52763b714244d1</string>
+  </approvedScriptHashes>
+  <approvedSignatures/>
+  <aclApprovedSignatures/>
+  <approvedClasspathEntries/>
+  <pendingScripts/>
+  <pendingSignatures>
+    <pendingSignature>
+      <context/>
+      <signature>staticMethod org.codehaus.groovy.runtime.DefaultGroovyMethods execute java.lang.String</signature>
+      <dangerous>true</dangerous>
+    </pendingSignature>
+  </pendingSignatures>
+  <pendingClasspathEntries/>
+</scriptApproval>

@@ -1,0 +1,12 @@
+Started by user [8mha:////4Nw2w4KL9NeMiRb1nl0H9jz7+tOgqAKaQPnG6rMPhAH0AAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/clijobtest
+[WS-CLEANUP] Deleting project workspace...
+[WS-CLEANUP] Deferred wipeout is used...
+[clijobtest] $ /bin/sh -xe /tmp/jenkins1265591630230696926.sh
++ wget http://http://34.93.183.234/jnlpJars/jenkins-cli.jar
+--2020-01-30 04:17:09--  http://http//34.93.183.234/jnlpJars/jenkins-cli.jar
+Resolving http (http)... failed: Name or service not known.
+wget: unable to resolve host address ‘http’
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE

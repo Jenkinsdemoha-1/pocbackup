@@ -1,0 +1,12 @@
+Started by timer
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/jobmonitor
+[jobmonitor] $ /bin/sh -xe /tmp/jenkins3486010407033256196.sh
+++ curl -s -o /dev/null -w '%{http_code}\n' http://34.107.220.208/
++ response=502
++ echo 'Status: 502'
+Status: 502
++ '[' 502 '!=' 200 ']'
++ exit 1
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE

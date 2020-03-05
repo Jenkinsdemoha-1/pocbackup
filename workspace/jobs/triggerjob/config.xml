@@ -1,0 +1,57 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description></description>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <com.sonyericsson.rebuild.RebuildSettings plugin="rebuild@1.31">
+      <autoRebuild>false</autoRebuild>
+      <rebuildDisabled>false</rebuildDisabled>
+    </com.sonyericsson.rebuild.RebuildSettings>
+    <hudson.model.ParametersDefinitionProperty>
+      <parameterDefinitions>
+        <hudson.model.StringParameterDefinition>
+          <name>name</name>
+          <description></description>
+          <defaultValue></defaultValue>
+          <trim>false</trim>
+        </hudson.model.StringParameterDefinition>
+      </parameterDefinitions>
+    </hudson.model.ParametersDefinitionProperty>
+  </properties>
+  <scm class="hudson.scm.NullSCM"/>
+  <canRoam>true</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers/>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <org.jenkinsci.plugins.ParameterizedRemoteTrigger.RemoteBuildConfiguration plugin="Parameterized-Remote-Trigger@3.1.1">
+      <remoteJenkinsName>RemoteJenkins</remoteJenkinsName>
+      <auth2 class="org.jenkinsci.plugins.ParameterizedRemoteTrigger.auth2.CredentialsAuth">
+        <credentials>36160c8d-fa61-48aa-8f2f-52dc4117d2b2</credentials>
+      </auth2>
+      <shouldNotFailBuild>false</shouldNotFailBuild>
+      <trustAllCertificates>false</trustAllCertificates>
+      <overrideTrustAllCertificates>false</overrideTrustAllCertificates>
+      <preventRemoteBuildQueue>false</preventRemoteBuildQueue>
+      <pollInterval>10</pollInterval>
+      <blockBuildUntilComplete>false</blockBuildUntilComplete>
+      <job>test</job>
+      <token></token>
+      <parameters>NAME=$name</parameters>
+      <enhancedLogging>false</enhancedLogging>
+      <loadParamsFromFile>false</loadParamsFromFile>
+      <parameterFile></parameterFile>
+      <maxConn>1</maxConn>
+      <useCrumbCache>true</useCrumbCache>
+      <useJobInfoCache>true</useJobInfoCache>
+      <abortTriggeredJob>false</abortTriggeredJob>
+      <disabled>false</disabled>
+      <hostPermits/>
+    </org.jenkinsci.plugins.ParameterizedRemoteTrigger.RemoteBuildConfiguration>
+  </builders>
+  <publishers/>
+  <buildWrappers/>
+</project>

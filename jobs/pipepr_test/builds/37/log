@@ -1,0 +1,67 @@
+Started by remote host 35.223.53.23
+Started by user [8mha:////4Nw2w4KL9NeMiRb1nl0H9jz7+tOgqAKaQPnG6rMPhAH0AAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+Rebuilds build #[8mha:////4EWeKqyz+2VeiGdd8ClfEW7+9XuW06TX1Ms0aGXYe+S9AAAAnx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAymEgZh/az8JP2CzILUgqL4ktTiEn1jMwD6eLYSyAAAAA==[0m36
+Running in Durability level: MAX_SURVIVABILITY
+[8mha:////4Dt+v3BMcPdHLYz61KEEiwzGhM6ycOeJ4WBktwoQxJz2AAAAoh+LCAAAAAAAAP9tjTEOwjAQBM8BClpKHuFItIiK1krDC0x8GCfWnbEdkooX8TX+gCESFVvtrLSa5wtWKcKBo5UdUu8otU4GP9jS5Mixv3geZcdn2TIl9igbHBs2eJyx4YwwR1SwULBGaj0nRzbDRnX6rmuvydanHMu2V1A5c4MHCFXMWcf8hSnC9jqYxPTz/BXAFEIGsfuclm8zQVqFvQAAAA==[0m[Pipeline] Start of Pipeline
+[8mha:////4LePRuKIg8BM7anNKqGh7N65mWXTqv+S7LGjb4RC60AUAAAApR+LCAAAAAAAAP9tjTEOwjAUQ3+KOrAycohUghExsUZZOEFIQkgb/d8mKe3EibgadyBQiQlLlmxL1nu+oE4RjhQdby12HpP2vA+jK4lPFLtroIm3dOGaMFGwXNpJkrGnpUrKFhaxClYC1hZ1oOTRZdiIVt1VExS65pxj2Q4CKm8GeAAThZxVzN8yR9jeRpMIf5y/AJj7DGxXvP/86jduZBmjwAAAAA==[0m[Pipeline] node
+Running on [8mha:////4GiXjbCXRU67PDtrIk7aKfY8QgsK+6+NSEOnnIW6QXdfAAAAnh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAz2EgZh/eT83ILSktQifY3cxGIgrakPAHib2iPIAAAA[0mJenkins in /var/lib/jenkins/workspace/pipepr_test
+[8mha:////4JqU2nZHRoUbBIGsRrZu71CvXNelXgIRkRRfK+Y2/3CMAAAApR+LCAAAAAAAAP9tjTEOwjAUQ3+KOrAycoh0gA0xsUZZOEFIQkgb/d8mKe3EibgadyBQiQlLlmxL1nu+oE4RjhQdby12HpP2vA+jK4lPFLtroIm3dOGaMFGwXNpJkrGnpUrKFhaxClYC1hZ1oOTRZdiIVt1VExS65pxj2Q4CKm8GeAAThZxVzN8yR9jeRpMIf5y/AJj7DGxXvP/86jfoP95RwAAAAA==[0m[Pipeline] {
+[8mha:////4BdhUNwIC3WOEOYQ1ZU57ykAwXCdAFL8/aPIMF4WSJcqAAAAoh+LCAAAAAAAAP9tjTEOAiEURD9rLGwtPQTbaGWsbAmNJ0AWEZb8zwLrbuWJvJp3kLiJlZNMMm+a93rDOic4UbLcG+wdZu14DKOti0+U+lugiXu6ck2YKRguzSSpM+cFJRUDS1gDKwEbgzpQdmgLbIVXD9UGhba9lFS/o4DGdQM8gYlqLiqVL8wJdvexy4Q/z18BzLEA29ce4gdpL1fxvAAAAA==[0m[Pipeline] echo
+5
+[8mha:////4CpZcq/MBljzohc36V7Wh8VWi+eA3ENmXrLTvJpFsgR2AAAAoh+LCAAAAAAAAP9tjTEOAiEURD9rLGwtPQTbGBtjZUtoPAGyiLDkfxZYdytP5NW8g8RNrJxkknnTvNcb1jnBiZLl3mDvMGvHYxhtXXyi1N8CTdzTlWvCTMFwaSZJnTkvKKkYWMIaWAnYGNSBskNbYCu8eqg2KLTtpaT6HQU0rhvgCUxUc1GpfGFOsLuPXSb8ef4KYI4F2L72ED+qfHravAAAAA==[0m[Pipeline] echo
+b01f9d6db6941602ad8b4dba24f559f52e14921c
+[8mha:////4MrOxeF3rSSI01ADItckjn++tf6h6GrNYSnMzQ0hEHdzAAAAox+LCAAAAAAAAP9tjTEOAiEURD9rLGwtPQTbmFgYK1tC4wmQRYQl/7PAult5Iq/mHSRuYuUkk8yb5r3esM4JTpQs9wZ7h1k7HsNo6+ITpf4WaOKerlwTZgqGSzNJ6sx5QUnFwBLWwErAxqAOlB3aAlvh1UO1QaFtLyXV7yigcd0AT2CimotK5Qtzgt197DLhz/NXAHMswPa1h/gB601hw7wAAAA=[0m[Pipeline] echo
+jenkindemo1
+[8mha:////4PCZqRgEi8aCw1k0kAvfrVqKQB6P2GPHxhvGHpuzqjftAAAAox+LCAAAAAAAAP9tjTEOAiEURD9rLGwtPQTbWJgYK1tC4wmQRYQl/7PAult5Iq/mHSRuYuUkk8yb5r3esM4JTpQs9wZ7h1k7HsNo6+ITpf4WaOKerlwTZgqGSzNJ6sx5QUnFwBLWwErAxqAOlB3aAlvh1UO1QaFtLyXV7yigcd0AT2CimotK5Qtzgt197DLhz/NXAHMswPa1h/gBJFH5RLwAAAA=[0m[Pipeline] echo
+develop
+[8mha:////4JJIWIZr57Ght4drGslZ+fzeMU80hcSsYzystzs7eV3mAAAAoh+LCAAAAAAAAP9tjTEOAiEURD9rLGwtPQTb2BhjZUtoPAGyiLDkfxZYdytP5NW8g8RNrJxkknnTvNcb1jnBiZLl3mDvMGvHYxhtXXyi1N8CTdzTlWvCTMFwaSZJnTkvKKkYWMIaWAnYGNSBskNbYCu8eqg2KLTtpaT6HQU0rhvgCUxUc1GpfGFOsLuPXSb8ef4KYI4F2L72ED9lYOJdvAAAAA==[0m[Pipeline] sh
+++ curl -k -u admin:admin 'http://35.223.53.23:7990/rest/api/latest/projects/JEN/repos/jenkindemo1/pull-requests/5/changes?limit=1000'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   566    0   566    0     0    791      0 --:--:-- --:--:-- --:--:--   791
++ json='{"fromHash":"e76813c9d9ecae0653b57e087384915be5bbda6c","toHash":"08ce812ea93db1659ca0243b5e7cd70e1dfd0464","properties":{"changeScope":"ALL"},"values":[{"contentId":"968100364bc063d8fc97e13e516ba6bc1e968676","fromContentId":"0000000000000000000000000000000000000000","path":{"components":["plugins","jaxb.hpi"],"parent":"plugins","name":"jaxb.hpi","extension":"hpi","toString":"plugins/jaxb.hpi"},"executable":false,"percentUnchanged":-1,"type":"ADD","nodeType":"FILE","links":{"self":[null]}}],"size":1,"isLastPage":true,"start":0,"limit":1000,"nextPageStart":null}'
++ echo '{"fromHash":"e76813c9d9ecae0653b57e087384915be5bbda6c","toHash":"08ce812ea93db1659ca0243b5e7cd70e1dfd0464","properties":{"changeScope":"ALL"},"values":[{"contentId":"968100364bc063d8fc97e13e516ba6bc1e968676","fromContentId":"0000000000000000000000000000000000000000","path":{"components":["plugins","jaxb.hpi"],"parent":"plugins","name":"jaxb.hpi","extension":"hpi","toString":"plugins/jaxb.hpi"},"executable":false,"percentUnchanged":-1,"type":"ADD","nodeType":"FILE","links":{"self":[null]}}],"size":1,"isLastPage":true,"start":0,"limit":1000,"nextPageStart":null}'
+[8mha:////4FWPSYk0B991IftEYNiWDHGbjjLaUodB6VX8UV/wBcAbAAAAox+LCAAAAAAAAP9tjTEOwjAQBDdBFLSUPMIBiQ5R0VppeIFJjHFi3QX7QlLxIr7GH4iIRMVWO9PM641lijhydKqx1HpKlVdd6N301MCxvQYeVMMXVTElDlaVdii5tqcZSxaLeVmOhcbKUhU4eXKCtW7MwxTBkCvOEid30Mh9fccTmZ7KYqJ8YYzY3Po6Mf06fwMYO0G2F+S7bfcBVVhdU70AAAA=[0m[Pipeline] readJSON
+[8mha:////4G/TDKr6vs1ydKVyNLd+GspkAyHfHyKeHqaFxd2JOWt0AAAAox+LCAAAAAAAAP9tjbEOgjAURS8YB1dHP6KExM04uTYsfkGFWgvNe9g+hMkv8tf8B4kkTt7pnrOc1xvrFHHk6FRrqfOUaq/6MLj5qZFjdw08qpYvqmZKHKyq7FhxY08LViwWy7IcK42NpTpw8uQEW92ahymCIVecJc7uoJH75o4nMj2XxUT5whSxuw1NYvp1/gYw9YJsL8jLsv8AFGlGSr0AAAA=[0m[Pipeline] echo
+===============================================
+[8mha:////4AuQNp0sJvTQSS7fJHdLpZ1Ot0mciG2LYataQIBq+8JkAAAAox+LCAAAAAAAAP9tjTEOwjAQBDdBFLSUPMIRiA5R0VppeIFJjHFi3QX7QlLxIr7GH4iIRMVWO9PM641lijhydKqx1HpKlVdd6N301MCxvQYeVMMXVTElDlaVdii5tqcZSxaLeVmOhcbKUhU4eXKCtW7MwxTBkCvOEid30Mh9fccTmZ7KYqJ8YYzY3Po6Mf06fwMYO0G2F+TbXfcB1zprYb0AAAA=[0m[Pipeline] echo
+[plugins/jaxb.hpi]
+[8mha:////4JLoAQMG7nVsl74ExQvg6FWh7jmyhWE7h108gZT8iu//AAAAph+LCAAAAAAAAP9tjTEOwjAQBM9BKWgpeYQjBB2iorXc8AITG+PEugv2haTiRXyNPxCIRMVWOyut5vmCMic4UPKycdgGzHWQXez91ORAqb1EGmRDZ1kTZopOajdosu44oyZ2MEcUsFCwdFhHygE9w0o15m6qaNBXJ07TtldQBHuDBwg1mdkk/sKYYH3tbSb8ef4KYOwYxI6h2Gw/x/INGJa+18EAAAA=[0m[Pipeline] stage
+[8mha:////4HXOKS2Czn0gEnNF/r98PomZY2TBxUreCAZceUsW9S6HAAAApx+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUCDbE1DXKwglCE0La6P/yk9JOnIircQdaKjHhwbItWe/1hiIynIidaCy2HmPtRRd6NyUxELfXQINo6CJqwkjBCmUHRcZWS1WULCzKclhJWFusA0WPLsFGNvqhy6DRlefE03aUkHtzhydkciInzelbRobtrTeR8Mf5C4CxS5Dv9rMd5mfxAbNWnxXCAAAA[0m[Pipeline] { (Checkout)
+[8mha:////4Gxlmqk7UcFxb/6wpwfvZG+qJfn/L1f2nDle61jRdOXhAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiJKgQVVrLDS8wsTFOrDtjOyQVL+Jr/IFAJCq2WO1sM88XLFOEI0eLraHOUWocBt/baeHAsbt4HrDlMzZMib1BaQbJ2tQzSs4G5hQlLASsDDWekyObYS1adVeVV2SrU47TdxBQOn2DBxRiMmcV8xfGCJtrrxPTz/NXAGPIUG53n9qHN8W7Eii+AAAA[0m[Pipeline] checkout
+using credential 36686a20-adb7-47ac-999f-4e5c2d9a3dbe
+Cloning the remote Git repository
+Cloning repository http://35.223.53.23:7990/scm/JEN/jenkindemo1.git
+ > git init /var/lib/jenkins/workspace/pipepr_test # timeout=10
+Fetching upstream changes from http://35.223.53.23:7990/scm/JEN/jenkindemo1.git
+ > git --version # timeout=10
+using GIT_ASKPASS to set credentials git user
+ > git fetch --tags --progress http://35.223.53.23:7990/scm/JEN/jenkindemo1.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url http://35.223.53.23:7990/scm/JEN/jenkindemo1.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url http://35.223.53.23:7990/scm/JEN/jenkindemo1.git # timeout=10
+Fetching upstream changes from http://35.223.53.23:7990/scm/JEN/jenkindemo1.git
+using GIT_ASKPASS to set credentials git user
+ > git fetch --tags --progress http://35.223.53.23:7990/scm/JEN/jenkindemo1.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse origin/develop^{commit} # timeout=10
+Checking out Revision b01f9d6db6941602ad8b4dba24f559f52e14921c (origin/develop)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f b01f9d6db6941602ad8b4dba24f559f52e14921c # timeout=10
+Commit message: "adding plugin jaxb.hpi"
+[8mha:////4DmAoOPXaEHIPVy1+Tb/vdUVM/2l0HQSMPMtGvR68asXAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiJESDqNJabniBiY1xYt0Z2yGpeBFf4w8EIlGxxWpnm3m+YJkiHDlabA11jlLjMPjeTgsHjt3F84Atn7FhSuwNSjNI1qaeUXI2MKcoYSFgZajxnBzZDGvRqruqvCJbnXKcvoOA0ukbPKAQkzmrmL8wRthce52Yfp6/AhhDyFBu95/avQG9gN7HvgAAAA==[0m[Pipeline] }
+[8mha:////4EG9ANUvdwXDJ0BRr/VM9adtMC2zsjQygak5JBzRSy4bAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiREGBqNJabniBiY1xYt0Z2yGpeBFf4w8EIlGxxWpnm3m+YJkiHDlabA11jlLjMPjeTgsHjt3F84Atn7FhSuwNSjNI1qaeUXI2MKcoYSFgZajxnBzZDGvRqruqvCJbnXKcvoOA0ukbPKAQkzmrmL8wRthce52Yfp6/AhhDyFBu95/avQG7xuaSvgAAAA==[0m[Pipeline] // stage
+[8mha:////4PULFjntB+ryHmtb+KpfFXMIC0V4d85PBj66nDY/I4LNAAAApx+LCAAAAAAAAP9tjTEOwjAQBM9BKWgpeYQjJAokREVrueEFJjbGiXUX7AtJxYv4Gn8gEImKrXZWWs3zBWVOcKDkZeOwDZjrILvY+6nJgVJ7iTTIhs6yJswUndRu0GTdcUZN7GCOKGChYOmwjpQDeoaVaszdVNGgr06cpm2voAj2Bg8QajKzSfyFMcH62ttM+PP8FcDYMYgtQ7HZfY7lG9tmeb3BAAAA[0m[Pipeline] stage
+[8mha:////4FfvH917BLpZwfwBC1CHEyjeYwnJxiIfDyPh+3jG2JdfAAAApx+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUbCDE1DXKwglCE0La6P/yk9JOnIircQdaKjHhwbItWe/1hiIynIidaCy2HmPtRRd6NyUxELfXQINo6CJqwkjBCmUHRcZWS1WULCzKclhJWFusA0WPLsFGNvqhy6DRlefE03aUkHtzhydkciInzelbRobtrTeR8Mf5C4CxS5Dv9rMd5mfxASnCIIrCAAAA[0m[Pipeline] { (Copy Files)
+[8mha:////4DpqDSbPLR/UsqVgg6wElGDTgz0mDPZ9pEg0JFO8FfhyAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOICdAilorXc8AKTGOPEugu2g1PxIr7GH7CIRMUWq51t5vWGZfBQszfYaeothcbi4EaTFyb2/dVxwo4v2DAFdhqlTpJbfZpRctQwpyhhIWClqXEcLJkIa9Gph6qcIlOdo8/fUUBp2zs8oRDZHJWPX5g8bG5jG5h+nr8CmIYI5e6Qa78dPhmQ9Da+AAAA[0m[Pipeline] sh
++ sudo cp -rfv --parent plugins/jaxb.hpi /mnt/jenkinsbackup/
+‘plugins/jaxb.hpi’ -> ‘/mnt/jenkinsbackup/plugins/jaxb.hpi’
+[8mha:////4DgRpoTWLm+RWiEDhRLtLCkjcJ5Yi+rgXQDqOiXMmxLhAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOKi0CFEldZKwwtMbIwT687YDknFi/gaf8AiEhVbrHa2mdcb1jHAiYPBXtNgKXYWvRtNXjhxGK6OJ+z5gh1TZKex1VPLSjcLtpw0LClKWAnYaOocR0smwVb08iErJ8lU5xTydxRQWnWHJxQim5MM6QtzgN1tVJHp5/krgNn7BOW+zlUfPiXWgpW+AAAA[0m[Pipeline] }
+[8mha:////4DjJmJS7V3pPdnbAv6It3HIq79us5lbAC2n2cEFXeX20AAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPMIRqZAQVVorDS8w8WGcWHfGdkgqXsTX+AMWkajYYrWzzbzesI4BThyM6JEGS7GzwrvR5CUmDsPV8SR6voiOKbJD0eLUssZmwZYTwpKihJWEDVLnOFoyCbayVw9VOUWmOqeQv6OE0uo7PKGQ2ZxUSF+YA+xuo45MP89fAczeJyjrOtf+8AEdlBFkvgAAAA==[0m[Pipeline] // stage
+[8mha:////4HyK8SBpe87THAqkr367EpI9hm5MsDdjFV+3hejfiPcDAAAAox+LCAAAAAAAAP9tjTEOwjAQBDdBFLSUPMKRgA5R0VppeIFJjHFi3QX7QlLxIr7GH4iIRMVWO9PM641lijhydKqx1HpKlVdd6N301MCxvQYeVMMXVTElDlaVdii5tqcZSxaLeVmOhcbKUhU4eXKCtW7MwxTBkCvOEid30Mh9fccTmZ7KYqJ8YYzY3Po6Mf06fwMYO0G2F+TbXfcBz7U2er0AAAA=[0m[Pipeline] deleteDir
+[8mha:////4Nex11cVhLUT3ddv3Y14/ykuUeopKVD7jz2ULotk9qHOAAAAox+LCAAAAAAAAP9tjbEOgjAURS8YB1dHP6Ikhs04uTYsfkGFWgvNe9g+hMkv8tf8B4kkTt7pnrOc1xvrFHHk6FRrqfOUaq/6MLj5qZFjdw08qpYvqmZKHKyq7FhxY08LViwWy7IcK42NpTpw8uQEW92ahymCIVecJc7uoJH75o4nMj2XxUT5whSxuw1NYvp1/gYw9YKsFOT7sv8ACCN3Nb0AAAA=[0m[Pipeline] step
+Notifying Bitbucket at "http://35.223.53.23:7990"
+Notified Bitbucket for commit with id b01f9d6db6941602ad8b4dba24f559f52e14921c
+[8mha:////4BYcd3g/Vr10HVe7GidGBA38OWgpyZYGtHY6ke17hWpdAAAAox+LCAAAAAAAAP9tjTEOwjAQBDdBFLSUPMKREFSIitZKwwtMYowT6y7YF5KKF/E1/kBEJCq22plmXm8sU8SRo1ONpdZTqrzqQu+mpwaO7TXwoBq+qIopcbCqtEPJtT3NWLJYzMtyLDRWlqrAyZMTrHVjHqYIhlxxlji5g0bu6zueyPRUFhPlC2PE5tbXienX+RvA2HWCfLsXZLsPW9YxnL0AAAA=[0m[Pipeline] }
+[8mha:////4LpjWo+MjqzxjSJ4dSxVWFaR8Lz9mNse40FlH5sJ7mN6AAAApB+LCAAAAAAAAP9tjTEOwjAQBDdBFLSUPMKRQKJBVLRWGl5gEmOcWHfBvpBUvIiv8QciIlGx1c4083pjmSKOHJ1qLLWeUuVVF3o3PTVwbK+BB9XwRVVMiYNVpR1Kru1pxpLFYl6WY6GxslQFTp6cYK0b8zBFMOSKs8TJHTRyX9/xRKanspgoXxgjNre+Tky/zt8Axq4T5Nu9INt9ACg59UW9AAAA[0m[Pipeline] // node
+[8mha:////4GDj0DM60EETZepttQO2MfqQ8WsFaZ15G7sgQBzO8WosAAAAox+LCAAAAAAAAP9tjbEOgjAURS8YB1dHP6IkLA7GybVh8Qsq1Fpo3sP2IUx+kb/mP0gkcfJO95zlvN5Yp4gjR6daS52nVHvVh8HNT40cu2vgUbV8UTVT4mBVZceKG3tasGKxWJblWGlsLNWBkycn2OrWPEwRDLniLHF2B43cN3c8kem5LCbKF6aI3W1oEtOv8zeAqe8FebkXZOUHDiCSD70AAAA=[0m[Pipeline] End of Pipeline
+Finished: SUCCESS

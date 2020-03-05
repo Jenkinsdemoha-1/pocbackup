@@ -1,0 +1,30 @@
+Started by user [8mha:////4Nw2w4KL9NeMiRb1nl0H9jz7+tOgqAKaQPnG6rMPhAH0AAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/RestoreBackup
+[RestoreBackup] $ /bin/sh -xe /tmp/jenkins8645532546317622958.sh
++ echo 'Cleaning jenkins'
+Cleaning jenkins
++ sudo rm -rf /mnt/jenkinsbackup/com.cloudbees.hudson.plugins.folder.config.AbstractFolderConfiguration.xml /mnt/jenkinsbackup/config.xml /mnt/jenkinsbackup/hudson.model.UpdateCenter.xml /mnt/jenkinsbackup/hudson.plugins.emailext.ExtendedEmailPublisher.xml /mnt/jenkinsbackup/hudson.plugins.git.GitTool.xml /mnt/jenkinsbackup/identity.key.enc /mnt/jenkinsbackup/jenkins.install.InstallUtil.lastExecVersion /mnt/jenkinsbackup/jenkins.install.UpgradeWizard.state /mnt/jenkinsbackup/jenkins.model.JenkinsLocationConfiguration.xml /mnt/jenkinsbackup/jenkins.telemetry.Correlator.xml /mnt/jenkinsbackup/jobs /mnt/jenkinsbackup/logs /mnt/jenkinsbackup/nodeMonitors.xml /mnt/jenkinsbackup/nodes /mnt/jenkinsbackup/plugins /mnt/jenkinsbackup/queue.xml.bak /mnt/jenkinsbackup/secret.key /mnt/jenkinsbackup/secret.key.not-so-secret /mnt/jenkinsbackup/secrets /mnt/jenkinsbackup/updates /mnt/jenkinsbackup/userContent /mnt/jenkinsbackup/users /mnt/jenkinsbackup/workflow-libs /mnt/jenkinsbackup/workspace
++ echo 'Cleaning Completed'
+Cleaning Completed
++ echo 'Restoring backup 2020-01-30-09:07:44'
+Restoring backup 2020-01-30-09:07:44
++ sudo cp -af /backup/2020-01-30-09:07:44/com.cloudbees.hudson.plugins.folder.config.AbstractFolderConfiguration.xml /backup/2020-01-30-09:07:44/config.xml /backup/2020-01-30-09:07:44/hudson.model.UpdateCenter.xml /backup/2020-01-30-09:07:44/hudson.plugins.emailext.ExtendedEmailPublisher.xml /backup/2020-01-30-09:07:44/hudson.plugins.git.GitTool.xml /backup/2020-01-30-09:07:44/identity.key.enc /backup/2020-01-30-09:07:44/jenkins.install.InstallUtil.lastExecVersion /backup/2020-01-30-09:07:44/jenkins.install.UpgradeWizard.state /backup/2020-01-30-09:07:44/jenkins.model.JenkinsLocationConfiguration.xml /backup/2020-01-30-09:07:44/jenkins.telemetry.Correlator.xml /backup/2020-01-30-09:07:44/jobs /backup/2020-01-30-09:07:44/logs /backup/2020-01-30-09:07:44/nodeMonitors.xml /backup/2020-01-30-09:07:44/nodes /backup/2020-01-30-09:07:44/plugins /backup/2020-01-30-09:07:44/queue.xml.bak /backup/2020-01-30-09:07:44/secret.key /backup/2020-01-30-09:07:44/secret.key.not-so-secret /backup/2020-01-30-09:07:44/secrets /backup/2020-01-30-09:07:44/updates /backup/2020-01-30-09:07:44/userContent /backup/2020-01-30-09:07:44/users /backup/2020-01-30-09:07:44/workflow-libs /backup/2020-01-30-09:07:44/workspace /mnt/jenkinsbackup/
++ echo 'Restoring Done'
+Restoring Done
+[RestoreBackup] $ /bin/sh -xe /tmp/jenkins6686096845020159441.sh
++ ssh demjenkins123@10.160.0.16 'sudo systemctl status jenkins'
+● jenkins.service - LSB: Jenkins Automation Server
+   Loaded: loaded (/etc/rc.d/init.d/jenkins; bad; vendor preset: disabled)
+   Active: active (running) since Thu 2020-01-30 09:00:47 UTC; 27min ago
+     Docs: man:systemd-sysv-generator(8)
+  Process: 1761 ExecStop=/etc/rc.d/init.d/jenkins stop (code=exited, status=0/SUCCESS)
+  Process: 1775 ExecStart=/etc/rc.d/init.d/jenkins start (code=exited, status=0/SUCCESS)
+   CGroup: /system.slice/jenkins.service
+           └─1796 /etc/alternatives/java -Djava.awt.headless=true -DJENKINS_HOME=/opt/jenkins -jar /usr/lib/jenkins/jenkins.war --logfile=/var/log/jenkins/jenkins.log --webroot=/var/cache/jenkins/war --httpPort=8080 --debug=5 --handlerCountMax=100 --handlerCountMaxIdle=20
+
+Jan 30 09:00:46 jenkins systemd[1]: Starting LSB: Jenkins Automation Server...
+Jan 30 09:00:46 jenkins runuser[1780]: pam_unix(runuser:session): session opened for user jenkins by (uid=0)
+Jan 30 09:00:47 jenkins jenkins[1775]: Starting Jenkins [  OK  ]
+Jan 30 09:00:47 jenkins systemd[1]: Started LSB: Jenkins Automation Server.
+Finished: SUCCESS

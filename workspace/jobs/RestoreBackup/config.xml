@@ -1,0 +1,130 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description></description>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <com.sonyericsson.rebuild.RebuildSettings plugin="rebuild@1.31">
+      <autoRebuild>false</autoRebuild>
+      <rebuildDisabled>false</rebuildDisabled>
+    </com.sonyericsson.rebuild.RebuildSettings>
+    <hudson.model.ParametersDefinitionProperty>
+      <parameterDefinitions>
+        <org.biouno.unochoice.ChoiceParameter plugin="uno-choice@2.2.2">
+          <name>BackupFolders</name>
+          <description></description>
+          <randomName>choice-parameter-3303241929523</randomName>
+          <visibleItemCount>1</visibleItemCount>
+          <script class="org.biouno.unochoice.model.GroovyScript">
+            <secureScript plugin="script-security@1.69">
+              <script>import groovy.io.* 
+dlist=[]
+new File(&quot;/backup&quot;).eachDir {dlist &lt;&lt; it.name}
+dlist.sort()
+if(dlist.size()==0)
+  return [&quot;No Backups found&quot;]
+else
+  return dlist.reverse()</script>
+              <sandbox>false</sandbox>
+            </secureScript>
+            <secureFallbackScript plugin="script-security@1.69">
+              <script>[&quot;Error&quot;]</script>
+              <sandbox>false</sandbox>
+            </secureFallbackScript>
+          </script>
+          <projectName>RestoreBackup</projectName>
+          <projectFullName>RestoreBackup</projectFullName>
+          <choiceType>PT_SINGLE_SELECT</choiceType>
+          <filterable>false</filterable>
+          <filterLength>1</filterLength>
+        </org.biouno.unochoice.ChoiceParameter>
+      </parameterDefinitions>
+    </hudson.model.ParametersDefinitionProperty>
+  </properties>
+  <scm class="hudson.scm.NullSCM"/>
+  <canRoam>true</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers/>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <hudson.tasks.Shell>
+      <command>sudo crontab -l
+sudo crontab -r
+echo &quot;Cleaning jenkins&quot;
+sudo rm -rf /mnt/jenkinsbackup/*
+echo &quot;Cleaning Completed&quot;
+echo &quot;Restoring backup ${BackupFolders}&quot;
+sudo cp -af /backup/${BackupFolders}/* /mnt/jenkinsbackup/
+echo &quot;Restoring Done&quot;</command>
+    </hudson.tasks.Shell>
+    <hudson.tasks.Shell>
+      <command>#!/bin/sh
+server=`cat /opt/initialise.sh | head -1 | cut -d&apos;=&apos; -f2 | awk &apos;{gsub(&quot;http://|/|:.*&quot;,&quot;&quot;)}1&apos;`
+ssh jenkinsdemoha@$server &quot;sudo systemctl restart jenkins&quot;</command>
+    </hudson.tasks.Shell>
+    <hudson.tasks.Shell>
+      <command>echo &quot;======================Checking Status of JENKINS.....=====================&quot;
+count=0
+while [ &quot;$count&quot; -ne 6 ]
+do
+ response=$(curl -s -o /dev/null -w &quot;%{http_code}\n&quot; -u &apos;admin:11f10b8fd29e1c1f0fb14c7f1e74dbd158&apos; http://104.197.197.188/)
+ echo &quot;Status: $response&quot;
+ if [ &quot;$response&quot; != &quot;200&quot; ]
+ then
+  sleep 5
+  count=`expr $count + 1` 
+ else
+  break
+ fi
+done
+echo &quot;$count&quot;
+if [ &quot;$count&quot; -eq 6 ]
+then
+ echo &quot;===================Jenkins did not start within time======================&quot;
+ exit 1
+else
+ echo &quot;======================JENKINS server is UP===========================&quot;
+fi</command>
+    </hudson.tasks.Shell>
+    <hudson.plugins.parameterizedtrigger.TriggerBuilder plugin="parameterized-trigger@2.36">
+      <configs>
+        <hudson.plugins.parameterizedtrigger.BlockableBuildTriggerConfig>
+          <configs class="empty-list"/>
+          <projects>clijobtest</projects>
+          <condition>ALWAYS</condition>
+          <triggerWithNoParameters>false</triggerWithNoParameters>
+          <triggerFromChildProjects>false</triggerFromChildProjects>
+          <block>
+            <buildStepFailureThreshold>
+              <name>FAILURE</name>
+              <ordinal>2</ordinal>
+              <color>RED</color>
+              <completeBuild>true</completeBuild>
+            </buildStepFailureThreshold>
+            <unstableThreshold>
+              <name>UNSTABLE</name>
+              <ordinal>1</ordinal>
+              <color>YELLOW</color>
+              <completeBuild>true</completeBuild>
+            </unstableThreshold>
+            <failureThreshold>
+              <name>FAILURE</name>
+              <ordinal>2</ordinal>
+              <color>RED</color>
+              <completeBuild>true</completeBuild>
+            </failureThreshold>
+          </block>
+          <buildAllNodesWithLabel>false</buildAllNodesWithLabel>
+        </hudson.plugins.parameterizedtrigger.BlockableBuildTriggerConfig>
+      </configs>
+    </hudson.plugins.parameterizedtrigger.TriggerBuilder>
+    <hudson.tasks.Shell>
+      <command>sudo crontab /opt/cron.txt
+sudo crontab -l</command>
+    </hudson.tasks.Shell>
+  </builders>
+  <publishers/>
+  <buildWrappers/>
+</project>

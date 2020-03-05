@@ -1,0 +1,17 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2020-01-21 13:43:22.184 UTC</timestamp>
+  <md5sum>a8243a80870dc0e0cdba5c7f36042efe</md5sum>
+  <fileName>Credential id=36686a20-adb7-47ac-999f-4e5c2d9a3dbe name=admin/****** (git user)</fileName>
+  <usages>
+    <entry>
+      <string>pipepr_test</string>
+      <ranges>25-28,30-38,40-44</ranges>
+    </entry>
+    <entry>
+      <string>test</string>
+      <ranges>6-8</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

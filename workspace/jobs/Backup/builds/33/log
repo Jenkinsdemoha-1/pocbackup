@@ -1,0 +1,33 @@
+Started by user [8mha:////4Nw2w4KL9NeMiRb1nl0H9jz7+tOgqAKaQPnG6rMPhAH0AAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/Backup
+[Backup] $ /bin/sh -xe /tmp/jenkins4904757247794050319.sh
++ echo Taking Backup
+Taking Backup
++ date +%Y-%m-%d-%T
++ time_stamp=2020-03-02-14:40:27
++ backuppath=/backup
++ mkdir -p /backup/2020-03-02-14:40:27
++ echo Backup folder created at /backup/2020-03-02-14:40:27
+Backup folder created at /backup/2020-03-02-14:40:27
++ ssh jenkinsdemoha@104.197.197.188 sudo rm -rf /var/lib/jenkins/* 
++ ssh jenkinsdemoha@104.197.197.188
+Pseudo-terminal will not be allocated because stdin is not a terminal.
+Linux haproxy 4.9.0-12-amd64 #1 SMP Debian 4.9.210-1 (2020-01-20) x86_64
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
++ echo ======================Checking Status of Test JENKINS.....=====================
+======================Checking Status of Test JENKINS.....=====================
++ count=0
++ [ 0 -ne 12 ]
++ curl -s -o /dev/null -w %{http_code}\n -u jenkins:11fff86198c68769d492e45e82a0323a41 http://34.93.121.134/
+Terminated
++ response=
+Build was aborted
+Aborted by [8mha:////4Nw2w4KL9NeMiRb1nl0H9jz7+tOgqAKaQPnG6rMPhAH0AAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+Finished: ABORTED

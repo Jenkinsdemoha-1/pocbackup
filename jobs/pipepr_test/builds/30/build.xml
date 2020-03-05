@@ -1,0 +1,146 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<flow-build plugin="workflow-job@2.36">
+  <actions>
+    <hudson.model.ParametersAction>
+      <safeParameters class="sorted-set"/>
+      <parameters>
+        <hudson.model.StringParameterValue>
+          <name>repo</name>
+          <description></description>
+          <value>jenkindemo1</value>
+        </hudson.model.StringParameterValue>
+        <hudson.model.StringParameterValue>
+          <name>commitid</name>
+          <description></description>
+          <value>d7cae46aa7c2d4f39c81111b505366f2413c6cad</value>
+        </hudson.model.StringParameterValue>
+        <hudson.model.StringParameterValue>
+          <name>pr</name>
+          <description></description>
+          <value>1</value>
+        </hudson.model.StringParameterValue>
+        <hudson.model.StringParameterValue>
+          <name>branch</name>
+          <description></description>
+          <value>develop</value>
+        </hudson.model.StringParameterValue>
+      </parameters>
+      <parameterDefinitionNames>
+        <string>repo</string>
+        <string>commitid</string>
+        <string>pr</string>
+        <string>branch</string>
+      </parameterDefinitionNames>
+    </hudson.model.ParametersAction>
+    <hudson.model.CauseAction>
+      <causeBag class="linked-hash-map">
+        <entry>
+          <hudson.model.Cause_-RemoteCause>
+            <addr>35.223.53.23</addr>
+          </hudson.model.Cause_-RemoteCause>
+          <int>1</int>
+        </entry>
+      </causeBag>
+    </hudson.model.CauseAction>
+    <org.jenkinsci.plugins.workflow.libs.LibrariesAction plugin="workflow-cps-global-lib@2.15">
+      <libraries/>
+    </org.jenkinsci.plugins.workflow.libs.LibrariesAction>
+    <org.jenkinsci.plugins.workflow.cps.EnvActionImpl plugin="workflow-cps@2.78">
+      <env class="tree-map">
+        <entry>
+          <string>list_files</string>
+          <string>[jobs/pipe3/builds/1/build.xml, jobs/pipe3/builds/1/changelog5561369511813693375.xml, jobs/pipe3/builds/1/log, jobs/pipe3/builds/1/log-index, jobs/pipe3/builds/1/workflow/10.xml, jobs/pipe3/builds/1/workflow/11.xml, jobs/pipe3/builds/1/workflow/12.xml, jobs/pipe3/builds/1/workflow/13.xml, jobs/pipe3/builds/1/workflow/14.xml, jobs/pipe3/builds/1/workflow/15.xml, jobs/pipe3/builds/1/workflow/16.xml, jobs/pipe3/builds/1/workflow/17.xml, jobs/pipe3/builds/1/workflow/18.xml, jobs/pipe3/builds/1/workflow/19.xml, jobs/pipe3/builds/1/workflow/2.xml, jobs/pipe3/builds/1/workflow/20.xml, jobs/pipe3/builds/1/workflow/21.xml, jobs/pipe3/builds/1/workflow/22.xml, jobs/pipe3/builds/1/workflow/23.xml, jobs/pipe3/builds/1/workflow/24.xml, jobs/pipe3/builds/1/workflow/25.xml, jobs/pipe3/builds/1/workflow/3.xml, jobs/pipe3/builds/1/workflow/4.xml, jobs/pipe3/builds/1/workflow/5.xml, jobs/pipe3/builds/1/workflow/6.xml]</string>
+        </entry>
+        <entry>
+          <string>pr</string>
+          <string>1</string>
+        </entry>
+        <entry>
+          <string>repo</string>
+          <string>jenkindemo1</string>
+        </entry>
+      </env>
+    </org.jenkinsci.plugins.workflow.cps.EnvActionImpl>
+  </actions>
+  <queueId>90</queueId>
+  <timestamp>1579671870459</timestamp>
+  <startTime>1579671870462</startTime>
+  <result>FAILURE</result>
+  <duration>2829</duration>
+  <charset>UTF-8</charset>
+  <keepLog>false</keepLog>
+  <execution class="org.jenkinsci.plugins.workflow.cps.CpsFlowExecution">
+    <result>FAILURE</result>
+    <script>import groovy.json.JsonSlurper
+node(){
+    print pr
+    env.pr=pr
+    print commitid
+    env.repo=repo
+    print repo
+    print branch
+    //http://35.223.53.23:7990/rest/api/latest/projects/DEM/repos/jenkinspr/pull-requests/1/changes
+    def json = sh label: &apos;&apos;, returnStdout: true, 
+                script: &apos;&apos;&apos;json=$(curl -k -u admin:admin http://35.223.53.23:7990/rest/api/latest/projects/JEN/repos/$repo/pull-requests/$pr/changes)
+                echo &quot;$json&quot; &gt; test.json&apos;&apos;&apos;
+    json=readJSON file: &apos;test.json&apos;
+    //def slurper = new JsonSlurper()
+    //def result = slurper.parseText(json)
+    def list = json.get(&quot;values&quot;)
+    def list_files= []
+    //print list
+    for (int i=0;i&lt;list.size();i++){
+        def val = list[i].get(&quot;path&quot;)
+        if(!list_files.contains(val.get(&quot;toString&quot;)))
+            list_files.add(val.get(&quot;toString&quot;))
+    }
+    
+    print &quot;===============================================&quot;
+    print list_files
+	env.list_files=list_files
+    stage(&apos;Checkout&apos;){
+        checkout changelog: false, poll: false, scm: [$class: &apos;GitSCM&apos;, branches: [[name: &quot;$branch&quot;]], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: &apos;36686a20-adb7-47ac-999f-4e5c2d9a3dbe&apos;, url: &quot;http://35.223.53.23:7990/scm/dem/&quot;+repo+&quot;.git&quot;]]]
+    }
+	stage(&apos;Copy Files&apos;){
+		for(int j=0;j&lt;list_files.size();j++){
+			env.file=list_files[j]
+			sh&apos;&apos;&apos;
+				sudo cp -rfv --parent $file /mnt/jenkinsbackup/
+			&apos;&apos;&apos;
+		}
+	}
+    deleteDir()
+}</script>
+    <loadedScripts class="map"/>
+    <durabilityHint>MAX_SURVIVABILITY</durabilityHint>
+    <timings class="map">
+      <entry>
+        <string>flowNode</string>
+        <long>193231253</long>
+      </entry>
+      <entry>
+        <string>classLoad</string>
+        <long>11485285</long>
+      </entry>
+      <entry>
+        <string>run</string>
+        <long>402765088</long>
+      </entry>
+      <entry>
+        <string>parse</string>
+        <long>39446591</long>
+      </entry>
+      <entry>
+        <string>saveProgram</string>
+        <long>24648947</long>
+      </entry>
+    </timings>
+    <sandbox>true</sandbox>
+    <iota>20</iota>
+    <head>1:20</head>
+    <done>true</done>
+    <resumeBlocked>false</resumeBlocked>
+  </execution>
+  <completed>true</completed>
+  <checkouts class="hudson.util.PersistedList"/>
+</flow-build>

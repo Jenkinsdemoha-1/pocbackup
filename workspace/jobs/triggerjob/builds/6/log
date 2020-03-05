@@ -1,0 +1,21 @@
+Started by user [8mha:////4Nw2w4KL9NeMiRb1nl0H9jz7+tOgqAKaQPnG6rMPhAH0AAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+Rebuilds build #[8mha:////4OAx1D/dGYFp3e5f4tMwZfkbPYXSnr3iUqwhCQWzAL3TAAAAmR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLQIwSBkH9rPwkfaDm9PTUIhDTFACW6f9MxgAAAA==[0m5
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/triggerjob
+################################################################################################################
+  Parameterized Remote Trigger Configuration:
+    - job:                     http://34.70.242.164:8080/job/test/ 
+    - remoteJenkinsName:       RemoteJenkins
+    - auth:                    'Credentials Authentication' as user 'jenkins2' (Credentials ID '36160c8d-fa61-48aa-8f2f-52dc4117d2b2')
+    - parameters:              [NAME=test]
+    - blockBuildUntilComplete: false
+    - connectionRetryLimit:    5
+    - trustAllCertificates:    false
+################################################################################################################
+Triggering non-parameterized remote job 'http://34.70.242.164:8080/job/test/'
+  Using job-level defined 'Credentials Authentication' as user 'jenkins2' (Credentials ID '36160c8d-fa61-48aa-8f2f-52dc4117d2b2')
+Triggering remote job now.
+CSRF protection is enabled on the remote server.
+ERROR: Remote build failed with 'ExceedRetryLimitException' for the following reason: 'Max number of connection retries have been exeeded.'.
+ERROR: ExceedRetryLimitException: Max number of connection retries have been exeeded.
+Finished: FAILURE

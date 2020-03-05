@@ -1,0 +1,33 @@
+Started by user [8mha:////4Nw2w4KL9NeMiRb1nl0H9jz7+tOgqAKaQPnG6rMPhAH0AAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/RestoreBackup
+[RestoreBackup] $ /bin/sh -xe /tmp/jenkins6536373395916971864.sh
++ sudo crontab -l
+* * * * * /opt/test.sh
++ sudo crontab -r
++ echo 'Cleaning jenkins'
+Cleaning jenkins
++ sudo rm -rf /mnt/jenkinsbackup/com.cloudbees.hudson.plugins.folder.config.AbstractFolderConfiguration.xml /mnt/jenkinsbackup/config.xml /mnt/jenkinsbackup/github-plugin-configuration.xml /mnt/jenkinsbackup/hudson.model.UpdateCenter.xml /mnt/jenkinsbackup/hudson.plugins.build_timeout.operations.BuildStepOperation.xml /mnt/jenkinsbackup/hudson.plugins.emailext.ExtendedEmailPublisher.xml /mnt/jenkinsbackup/hudson.plugins.git.GitSCM.xml /mnt/jenkinsbackup/hudson.plugins.git.GitTool.xml /mnt/jenkinsbackup/hudson.plugins.timestamper.TimestamperConfig.xml /mnt/jenkinsbackup/hudson.scm.SubversionSCM.xml /mnt/jenkinsbackup/hudson.tasks.Mailer.xml /mnt/jenkinsbackup/hudson.tasks.Shell.xml /mnt/jenkinsbackup/hudson.triggers.SCMTrigger.xml /mnt/jenkinsbackup/identity.key.enc /mnt/jenkinsbackup/jenkins.install.InstallUtil.lastExecVersion /mnt/jenkinsbackup/jenkins.install.UpgradeWizard.state /mnt/jenkinsbackup/jenkins.model.ArtifactManagerConfiguration.xml /mnt/jenkinsbackup/jenkins.model.JenkinsLocationConfiguration.xml /mnt/jenkinsbackup/jenkins.security.ResourceDomainConfiguration.xml /mnt/jenkinsbackup/jenkins.telemetry.Correlator.xml /mnt/jenkinsbackup/jobs /mnt/jenkinsbackup/logs /mnt/jenkinsbackup/nodeMonitors.xml /mnt/jenkinsbackup/nodes /mnt/jenkinsbackup/org.jenkinsci.plugins.pipeline.modeldefinition.config.GlobalConfig.xml /mnt/jenkinsbackup/org.jenkinsci.plugins.workflow.flow.GlobalDefaultFlowDurabilityLevel.xml /mnt/jenkinsbackup/org.jenkinsci.plugins.workflow.libs.GlobalLibraries.xml /mnt/jenkinsbackup/org.jenkins.plugins.lockableresources.LockableResourcesManager.xml /mnt/jenkinsbackup/plugins /mnt/jenkinsbackup/queue.xml.bak /mnt/jenkinsbackup/scriptApproval.xml /mnt/jenkinsbackup/secret.key /mnt/jenkinsbackup/secret.key.not-so-secret /mnt/jenkinsbackup/secrets /mnt/jenkinsbackup/updates /mnt/jenkinsbackup/userContent /mnt/jenkinsbackup/users /mnt/jenkinsbackup/workflow-libs /mnt/jenkinsbackup/workspace
++ echo 'Cleaning Completed'
+Cleaning Completed
++ echo 'Restoring backup 2020-02-04-12:25:15'
+Restoring backup 2020-02-04-12:25:15
++ sudo cp -af /backup/2020-02-04-12:25:15/com.cloudbees.hudson.plugins.folder.config.AbstractFolderConfiguration.xml /backup/2020-02-04-12:25:15/config.xml /backup/2020-02-04-12:25:15/github-plugin-configuration.xml /backup/2020-02-04-12:25:15/hudson.model.UpdateCenter.xml /backup/2020-02-04-12:25:15/hudson.plugins.build_timeout.operations.BuildStepOperation.xml /backup/2020-02-04-12:25:15/hudson.plugins.emailext.ExtendedEmailPublisher.xml /backup/2020-02-04-12:25:15/hudson.plugins.git.GitSCM.xml /backup/2020-02-04-12:25:15/hudson.plugins.git.GitTool.xml /backup/2020-02-04-12:25:15/hudson.plugins.timestamper.TimestamperConfig.xml /backup/2020-02-04-12:25:15/hudson.scm.SubversionSCM.xml /backup/2020-02-04-12:25:15/hudson.tasks.Mailer.xml /backup/2020-02-04-12:25:15/hudson.tasks.Shell.xml /backup/2020-02-04-12:25:15/hudson.triggers.SCMTrigger.xml /backup/2020-02-04-12:25:15/identity.key.enc /backup/2020-02-04-12:25:15/jenkins.install.InstallUtil.lastExecVersion /backup/2020-02-04-12:25:15/jenkins.install.UpgradeWizard.state /backup/2020-02-04-12:25:15/jenkins.model.ArtifactManagerConfiguration.xml /backup/2020-02-04-12:25:15/jenkins.model.JenkinsLocationConfiguration.xml /backup/2020-02-04-12:25:15/jenkins.security.ResourceDomainConfiguration.xml /backup/2020-02-04-12:25:15/jenkins.telemetry.Correlator.xml /backup/2020-02-04-12:25:15/jobs /backup/2020-02-04-12:25:15/logs /backup/2020-02-04-12:25:15/nodeMonitors.xml /backup/2020-02-04-12:25:15/nodes /backup/2020-02-04-12:25:15/org.jenkinsci.plugins.pipeline.modeldefinition.config.GlobalConfig.xml /backup/2020-02-04-12:25:15/org.jenkinsci.plugins.workflow.flow.GlobalDefaultFlowDurabilityLevel.xml /backup/2020-02-04-12:25:15/org.jenkinsci.plugins.workflow.libs.GlobalLibraries.xml /backup/2020-02-04-12:25:15/org.jenkins.plugins.lockableresources.LockableResourcesManager.xml /backup/2020-02-04-12:25:15/plugins /backup/2020-02-04-12:25:15/queue.xml.bak /backup/2020-02-04-12:25:15/scriptApproval.xml /backup/2020-02-04-12:25:15/secret.key /backup/2020-02-04-12:25:15/secret.key.not-so-secret /backup/2020-02-04-12:25:15/secrets /backup/2020-02-04-12:25:15/updates /backup/2020-02-04-12:25:15/userContent /backup/2020-02-04-12:25:15/users /backup/2020-02-04-12:25:15/workflow-libs /backup/2020-02-04-12:25:15/workspace /mnt/jenkinsbackup/
++ echo 'Restoring Done'
+Restoring Done
+[RestoreBackup] $ /bin/sh -xe /tmp/jenkins5878996592755586405.sh
+++ head -1
+++ cut -d= -f2
+++ awk '{gsub("http://|/|:.*","")}1'
+++ cat /opt/initialise.sh
++ server=10.160.0.15
++ ssh demjenkins123@10.160.0.15 'sudo systemctl restart jenkins'
+[RestoreBackup] $ /bin/sh -xe /tmp/jenkins1312398484319250982.sh
++ echo '======================Checking Status of JENKINS.....====================='
+======================Checking Status of JENKINS.....=====================
++ count=0
++ '[' 0 -ne 6 ']'
+++ curl -s -o /dev/null -w '%{http_code}\n' -u admin:11dbce11c7d2c4ad4c69b228ebaedd089d http://http://34.93.121.134/
++ response=000
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE

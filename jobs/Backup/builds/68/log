@@ -1,0 +1,22 @@
+Started by user [8mha:////4Nw2w4KL9NeMiRb1nl0H9jz7+tOgqAKaQPnG6rMPhAH0AAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/Backup
+[Backup] $ /bin/sh -xe /tmp/jenkins4660906924580835161.sh
++ echo Taking Backup to Test Jenkins
+Taking Backup to Test Jenkins
++ ssh jenkinsdemoha@104.197.197.188
+Pseudo-terminal will not be allocated because stdin is not a terminal.
+Linux haproxy 4.9.0-12-amd64 #1 SMP Debian 4.9.210-1 (2020-01-20) x86_64
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+[Backup] $ /bin/sh /tmp/jenkins7166054059500939139.sh
+======================Checking Status of Test JENKINS.....=====================
+20
+===================Jenkins did not start within time======================
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE

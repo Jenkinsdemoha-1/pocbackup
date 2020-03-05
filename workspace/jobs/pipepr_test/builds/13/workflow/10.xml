@@ -1,0 +1,25 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<Tag plugin="workflow-support@3.4">
+  <node class="cps.n.StepAtomNode" plugin="workflow-cps@2.78">
+    <parentIds>
+      <string>9</string>
+    </parentIds>
+    <id>10</id>
+    <descriptorId>org.jenkinsci.plugins.workflow.steps.EchoStep</descriptorId>
+  </node>
+  <actions>
+    <cps.a.ArgumentsActionImpl plugin="workflow-cps@2.78">
+      <arguments>
+        <entry>
+          <string>message</string>
+          <string>[{contentId=811cc6077bc5e81cfa65e2c15438671e7d9d4756, fromContentId=85805e4876494b0b4825ddce05dd9149cf2b82c1, path={components=[jenkinscon, config.xml], parent=jenkinscon, name=config.xml, extension=xml, toString=jenkinscon/config.xml}, executable=false, percentUnchanged=-1, type=MODIFY, nodeType=FILE, srcExecutable=false, links={self=[null]}}, {contentId=e69de29bb2d1d6434b8b29ae775ad8c2e48c5391, fromContentId=0000000000000000000000000000000000000000, path={components=[new.txt], parent=, name=new.txt, extension=txt, toString=new.txt}, executable=false, percentUnchanged=-1, type=ADD, nodeType=FILE, links={self=[null]}}, {contentId=235cd99ac2eb64e757bbb6b15449be709a6e2bef, fromContentId=218e18a8b94fdff654d357d85102d1fb2ca1fd8f, path={components=[test], parent=, name=test, toString=test}, executable=false, percentUnchanged=-1, type=MODIFY, nodeType=FILE, srcExecutable=false, links={self=[null]}}]</string>
+        </entry>
+      </arguments>
+      <isUnmodifiedBySanitization>true</isUnmodifiedBySanitization>
+    </cps.a.ArgumentsActionImpl>
+    <wf.a.TimingAction plugin="workflow-api@2.38">
+      <startTime>1579619003746</startTime>
+    </wf.a.TimingAction>
+    <s.a.LogStorageAction/>
+  </actions>
+</Tag>

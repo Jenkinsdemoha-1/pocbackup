@@ -1,0 +1,18 @@
+Started by user [8mha:////4Nw2w4KL9NeMiRb1nl0H9jz7+tOgqAKaQPnG6rMPhAH0AAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/RestoreBackup
+[RestoreBackup] $ /bin/sh -xe /tmp/jenkins8369595904181783456.sh
++ echo 'Cleaning jenkins'
+Cleaning jenkins
++ rm -rf '/mnt/jenkinsbackup/*'
++ echo 'Cleaning Completed'
+Cleaning Completed
++ echo 'Restoring backup 2020-01-20-10:38:21'
+Restoring backup 2020-01-20-10:38:21
++ cp -rf /backup/2020-01-20-10:38:21/com.cloudbees.hudson.plugins.folder.config.AbstractFolderConfiguration.xml /backup/2020-01-20-10:38:21/config.xml /backup/2020-01-20-10:38:21/copy_reference_file.log /backup/2020-01-20-10:38:21/hudson.model.UpdateCenter.xml /backup/2020-01-20-10:38:21/hudson.plugins.git.GitSCM.xml /backup/2020-01-20-10:38:21/hudson.plugins.git.GitTool.xml /backup/2020-01-20-10:38:21/hudson.tasks.Mailer.xml /backup/2020-01-20-10:38:21/hudson.tasks.Shell.xml /backup/2020-01-20-10:38:21/hudson.triggers.SCMTrigger.xml /backup/2020-01-20-10:38:21/identity.key.enc /backup/2020-01-20-10:38:21/init.groovy.d /backup/2020-01-20-10:38:21/jenkins.install.InstallUtil.lastExecVersion /backup/2020-01-20-10:38:21/jenkins.install.UpgradeWizard.state /backup/2020-01-20-10:38:21/jenkins.model.ArtifactManagerConfiguration.xml /backup/2020-01-20-10:38:21/jenkins.model.JenkinsLocationConfiguration.xml /backup/2020-01-20-10:38:21/jenkins.security.ResourceDomainConfiguration.xml /backup/2020-01-20-10:38:21/jenkins.telemetry.Correlator.xml /backup/2020-01-20-10:38:21/jobs /backup/2020-01-20-10:38:21/logs /backup/2020-01-20-10:38:21/lost+found /backup/2020-01-20-10:38:21/nodeMonitors.xml /backup/2020-01-20-10:38:21/nodes /backup/2020-01-20-10:38:21/org.jenkinsci.plugins.pipeline.modeldefinition.config.GlobalConfig.xml /backup/2020-01-20-10:38:21/org.jenkinsci.plugins.workflow.flow.FlowExecutionList.xml /backup/2020-01-20-10:38:21/org.jenkinsci.plugins.workflow.flow.GlobalDefaultFlowDurabilityLevel.xml /backup/2020-01-20-10:38:21/org.jenkinsci.plugins.workflow.libs.GlobalLibraries.xml /backup/2020-01-20-10:38:21/org.jenkins.plugins.lockableresources.LockableResourcesManager.xml /backup/2020-01-20-10:38:21/plugins /backup/2020-01-20-10:38:21/queue.xml /backup/2020-01-20-10:38:21/queue.xml.bak /backup/2020-01-20-10:38:21/secret.key /backup/2020-01-20-10:38:21/secret.key.not-so-secret /backup/2020-01-20-10:38:21/secrets /backup/2020-01-20-10:38:21/updates /backup/2020-01-20-10:38:21/userContent /backup/2020-01-20-10:38:21/users /backup/2020-01-20-10:38:21/war /backup/2020-01-20-10:38:21/workflow-libs /mnt/jenkinsbackup/.
+cp: cannot open ‘/backup/2020-01-20-10:38:21/identity.key.enc’ for reading: Permission denied
+cp: cannot access ‘/backup/2020-01-20-10:38:21/lost+found’: Permission denied
+cp: cannot access ‘/backup/2020-01-20-10:38:21/secrets’: Permission denied
+cp: cannot access ‘/backup/2020-01-20-10:38:21/users/admin_8420919738912885948’: Permission denied
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE

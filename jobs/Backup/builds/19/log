@@ -1,0 +1,16 @@
+Started by user [8mha:////4Nw2w4KL9NeMiRb1nl0H9jz7+tOgqAKaQPnG6rMPhAH0AAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/Backup
+[Backup] $ /bin/sh -xe /tmp/jenkins3450380908278147240.sh
++ echo 'Taking Backup'
+Taking Backup
+++ date +%Y-%m-%d-%T
++ time_stamp=2020-02-04-12:25:15
++ backuppath=/backup
++ mkdir -p /backup/2020-02-04-12:25:15
++ echo 'Backup folder created at /backup/2020-02-04-12:25:15'
+Backup folder created at /backup/2020-02-04-12:25:15
++ sudo cp -af /mnt/jenkinsbackup/com.cloudbees.hudson.plugins.folder.config.AbstractFolderConfiguration.xml /mnt/jenkinsbackup/config.xml /mnt/jenkinsbackup/github-plugin-configuration.xml /mnt/jenkinsbackup/hudson.model.UpdateCenter.xml /mnt/jenkinsbackup/hudson.plugins.build_timeout.operations.BuildStepOperation.xml /mnt/jenkinsbackup/hudson.plugins.emailext.ExtendedEmailPublisher.xml /mnt/jenkinsbackup/hudson.plugins.git.GitSCM.xml /mnt/jenkinsbackup/hudson.plugins.git.GitTool.xml /mnt/jenkinsbackup/hudson.plugins.timestamper.TimestamperConfig.xml /mnt/jenkinsbackup/hudson.scm.SubversionSCM.xml /mnt/jenkinsbackup/hudson.tasks.Mailer.xml /mnt/jenkinsbackup/hudson.tasks.Shell.xml /mnt/jenkinsbackup/hudson.triggers.SCMTrigger.xml /mnt/jenkinsbackup/identity.key.enc /mnt/jenkinsbackup/jenkins.install.InstallUtil.lastExecVersion /mnt/jenkinsbackup/jenkins.install.UpgradeWizard.state /mnt/jenkinsbackup/jenkins.model.ArtifactManagerConfiguration.xml /mnt/jenkinsbackup/jenkins.model.JenkinsLocationConfiguration.xml /mnt/jenkinsbackup/jenkins.security.ResourceDomainConfiguration.xml /mnt/jenkinsbackup/jenkins.telemetry.Correlator.xml /mnt/jenkinsbackup/jobs /mnt/jenkinsbackup/logs /mnt/jenkinsbackup/nodeMonitors.xml /mnt/jenkinsbackup/nodes /mnt/jenkinsbackup/org.jenkinsci.plugins.pipeline.modeldefinition.config.GlobalConfig.xml /mnt/jenkinsbackup/org.jenkinsci.plugins.workflow.flow.GlobalDefaultFlowDurabilityLevel.xml /mnt/jenkinsbackup/org.jenkinsci.plugins.workflow.libs.GlobalLibraries.xml /mnt/jenkinsbackup/org.jenkins.plugins.lockableresources.LockableResourcesManager.xml /mnt/jenkinsbackup/plugins /mnt/jenkinsbackup/queue.xml.bak /mnt/jenkinsbackup/scriptApproval.xml /mnt/jenkinsbackup/secret.key /mnt/jenkinsbackup/secret.key.not-so-secret /mnt/jenkinsbackup/secrets /mnt/jenkinsbackup/updates /mnt/jenkinsbackup/userContent /mnt/jenkinsbackup/users /mnt/jenkinsbackup/workflow-libs /mnt/jenkinsbackup/workspace /backup/2020-02-04-12:25:15/
++ echo 'Backup Completed'
+Backup Completed
+Finished: SUCCESS

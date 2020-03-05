@@ -1,0 +1,75 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description></description>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <com.sonyericsson.rebuild.RebuildSettings plugin="rebuild@1.31">
+      <autoRebuild>false</autoRebuild>
+      <rebuildDisabled>false</rebuildDisabled>
+    </com.sonyericsson.rebuild.RebuildSettings>
+  </properties>
+  <scm class="hudson.scm.NullSCM"/>
+  <canRoam>true</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers/>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <hudson.tasks.Shell>
+      <command>echo &quot;Taking Backup to Test Jenkins&quot;
+
+ssh jenkinsdemoha@104.197.197.188 &lt;&lt; EOF
+sudo rm -rf /var/lib/jenkins/* 
+sudo cp -af /mnt/jenkins/* /var/lib/jenkins/
+sudo service jenkins restart
+EOF
+
+</command>
+    </hudson.tasks.Shell>
+    <hudson.tasks.Shell>
+      <command>#!/bin/sh
+echo &quot;======================Checking Status of Test JENKINS.....=====================&quot;
+count=0
+while [ &quot;$count&quot; -ne 20 ]
+do
+ response=$(curl -s -o /dev/null -w &quot;%{http_code}&quot; -u &apos;admin:11f10b8fd29e1c1f0fb14c7f1e74dbd158&apos; &apos;http://104.197.197.188:8080/&apos;)
+# echo &quot;Status: $response&quot;
+ if [ &quot;$response&quot; != &quot;200&quot; ]
+ then
+  sleep 5
+  count=`expr $count + 1` 
+ else
+  break
+ fi
+done
+echo &quot;$count&quot;
+if [ &quot;$count&quot; -eq 20 ]
+then
+ echo &quot;===================Jenkins did not start within time======================&quot;
+ exit 1
+else
+ echo &quot;======================JENKINS server is UP===========================&quot;
+fi
+
+</command>
+    </hudson.tasks.Shell>
+    <hudson.tasks.Shell>
+      <command>wget http://104.197.197.188:8080/jnlpJars/jenkins-cli.jar
+java -jar jenkins-cli.jar -s http://104.197.197.188:8080/ -auth &apos;admin:11f10b8fd29e1c1f0fb14c7f1e74dbd158&apos; build &apos;testingclitrigger&apos; -s
+echo &quot;Validation Complete&quot;</command>
+    </hudson.tasks.Shell>
+    <hudson.tasks.Shell>
+      <command>time_stamp=$(date +%Y-%m-%d-%T)
+backuppath=&quot;/backup&quot;
+mkdir -p &quot;${backuppath}/${time_stamp}&quot;
+echo &quot;Backup folder created at ${backuppath}/${time_stamp}&quot;
+
+sudo cp -af /mnt/jenkinsbackup/* &quot;${backuppath}/${time_stamp}/&quot;
+echo &quot;Backup Completed&quot;</command>
+    </hudson.tasks.Shell>
+  </builders>
+  <publishers/>
+  <buildWrappers/>
+</project>

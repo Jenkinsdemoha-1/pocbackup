@@ -1,0 +1,18 @@
+Started by user [8mha:////4Nw2w4KL9NeMiRb1nl0H9jz7+tOgqAKaQPnG6rMPhAH0AAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/Backup
+[Backup] $ /bin/sh -xe /tmp/jenkins5507893224880768763.sh
++ echo Taking Backup
+Taking Backup
++ date +%Y-%m-%d-%T
++ time_stamp=2020-03-03-06:37:46
++ backuppath=/backup
++ mkdir -p /backup/2020-03-03-06:37:46
++ echo Backup folder created at /backup/2020-03-03-06:37:46
+Backup folder created at /backup/2020-03-03-06:37:46
++ ssh jenkinsdemoha@104.197.197.188 sudo rm -rf /var/lib/jenkins/* 
+Permission denied, please try again.
+Permission denied, please try again.
+Permission denied (publickey,password).
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE

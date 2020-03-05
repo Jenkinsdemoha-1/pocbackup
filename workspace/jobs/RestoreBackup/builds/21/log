@@ -1,0 +1,15 @@
+Started by user [8mha:////4Nw2w4KL9NeMiRb1nl0H9jz7+tOgqAKaQPnG6rMPhAH0AAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/RestoreBackup
+[RestoreBackup] $ /bin/sh -xe /tmp/jenkins8120943539552408118.sh
++ echo 'Cleaning jenkins'
+Cleaning jenkins
++ sudo rm -rf /mnt/jenkinsbackup/com.cloudbees.hudson.plugins.folder.config.AbstractFolderConfiguration.xml /mnt/jenkinsbackup/config.xml /mnt/jenkinsbackup/hudson.model.UpdateCenter.xml /mnt/jenkinsbackup/hudson.plugins.emailext.ExtendedEmailPublisher.xml /mnt/jenkinsbackup/hudson.plugins.git.GitTool.xml /mnt/jenkinsbackup/identity.key.enc /mnt/jenkinsbackup/jenkins.install.InstallUtil.lastExecVersion /mnt/jenkinsbackup/jenkins.install.UpgradeWizard.state /mnt/jenkinsbackup/jenkins.model.JenkinsLocationConfiguration.xml /mnt/jenkinsbackup/jenkins.telemetry.Correlator.xml /mnt/jenkinsbackup/jobs /mnt/jenkinsbackup/logs /mnt/jenkinsbackup/nodeMonitors.xml /mnt/jenkinsbackup/nodes /mnt/jenkinsbackup/plugins /mnt/jenkinsbackup/queue.xml.bak /mnt/jenkinsbackup/secret.key /mnt/jenkinsbackup/secret.key.not-so-secret /mnt/jenkinsbackup/secrets /mnt/jenkinsbackup/updates /mnt/jenkinsbackup/userContent /mnt/jenkinsbackup/users /mnt/jenkinsbackup/workflow-libs
++ echo 'Cleaning Completed'
+Cleaning Completed
++ echo 'Restoring backup 2020-01-30-09:04:45'
+Restoring backup 2020-01-30-09:04:45
++ sudo cp -af /backup/2020-01-30-09:04:45/com.cloudbees.hudson.plugins.folder.config.AbstractFolderConfiguration.xml /backup/2020-01-30-09:04:45/config.xml /backup/2020-01-30-09:04:45/hudson.model.UpdateCenter.xml /backup/2020-01-30-09:04:45/hudson.plugins.emailext.ExtendedEmailPublisher.xml /backup/2020-01-30-09:04:45/hudson.plugins.git.GitTool.xml /backup/2020-01-30-09:04:45/identity.key.enc /backup/2020-01-30-09:04:45/jenkins.install.InstallUtil.lastExecVersion /backup/2020-01-30-09:04:45/jenkins.install.UpgradeWizard.state /backup/2020-01-30-09:04:45/jenkins.model.JenkinsLocationConfiguration.xml /backup/2020-01-30-09:04:45/jenkins.telemetry.Correlator.xml /backup/2020-01-30-09:04:45/jobs /backup/2020-01-30-09:04:45/logs /backup/2020-01-30-09:04:45/nodeMonitors.xml /backup/2020-01-30-09:04:45/nodes /backup/2020-01-30-09:04:45/plugins /backup/2020-01-30-09:04:45/queue.xml.bak /backup/2020-01-30-09:04:45/secret.key /backup/2020-01-30-09:04:45/secret.key.not-so-secret /backup/2020-01-30-09:04:45/secrets /backup/2020-01-30-09:04:45/updates /backup/2020-01-30-09:04:45/userContent /backup/2020-01-30-09:04:45/users /backup/2020-01-30-09:04:45/workflow-libs /mnt/jenkinsbackup/
++ echo 'Restoring Done'
+Restoring Done
+Finished: SUCCESS

@@ -1,0 +1,66 @@
+Started by user [8mha:////4Nw2w4KL9NeMiRb1nl0H9jz7+tOgqAKaQPnG6rMPhAH0AAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/RestoreBackup
+[RestoreBackup] $ /bin/sh -xe /tmp/jenkins5863265033961204514.sh
++ echo 'Cleaning jenkins'
+Cleaning jenkins
++ sudo rm -rf /mnt/jenkinsbackup/com.cloudbees.hudson.plugins.folder.config.AbstractFolderConfiguration.xml /mnt/jenkinsbackup/config.xml /mnt/jenkinsbackup/github-plugin-configuration.xml /mnt/jenkinsbackup/hudson.model.UpdateCenter.xml /mnt/jenkinsbackup/hudson.plugins.build_timeout.operations.BuildStepOperation.xml /mnt/jenkinsbackup/hudson.plugins.emailext.ExtendedEmailPublisher.xml /mnt/jenkinsbackup/hudson.plugins.git.GitSCM.xml /mnt/jenkinsbackup/hudson.plugins.git.GitTool.xml /mnt/jenkinsbackup/hudson.plugins.timestamper.TimestamperConfig.xml /mnt/jenkinsbackup/hudson.scm.SubversionSCM.xml /mnt/jenkinsbackup/hudson.tasks.Mailer.xml /mnt/jenkinsbackup/hudson.tasks.Shell.xml /mnt/jenkinsbackup/hudson.triggers.SCMTrigger.xml /mnt/jenkinsbackup/identity.key.enc /mnt/jenkinsbackup/jenkins.install.InstallUtil.lastExecVersion /mnt/jenkinsbackup/jenkins.install.UpgradeWizard.state /mnt/jenkinsbackup/jenkins.model.ArtifactManagerConfiguration.xml /mnt/jenkinsbackup/jenkins.model.JenkinsLocationConfiguration.xml /mnt/jenkinsbackup/jenkins.security.ResourceDomainConfiguration.xml /mnt/jenkinsbackup/jenkins.telemetry.Correlator.xml /mnt/jenkinsbackup/jobs /mnt/jenkinsbackup/logs /mnt/jenkinsbackup/nodeMonitors.xml /mnt/jenkinsbackup/nodes /mnt/jenkinsbackup/org.jenkinsci.plugins.pipeline.modeldefinition.config.GlobalConfig.xml /mnt/jenkinsbackup/org.jenkinsci.plugins.workflow.flow.GlobalDefaultFlowDurabilityLevel.xml /mnt/jenkinsbackup/org.jenkinsci.plugins.workflow.libs.GlobalLibraries.xml /mnt/jenkinsbackup/org.jenkins.plugins.lockableresources.LockableResourcesManager.xml /mnt/jenkinsbackup/plugins /mnt/jenkinsbackup/queue.xml /mnt/jenkinsbackup/queue.xml.bak /mnt/jenkinsbackup/scriptApproval.xml /mnt/jenkinsbackup/secret.key /mnt/jenkinsbackup/secret.key.not-so-secret /mnt/jenkinsbackup/secrets /mnt/jenkinsbackup/updates /mnt/jenkinsbackup/userContent /mnt/jenkinsbackup/users /mnt/jenkinsbackup/workflow-libs /mnt/jenkinsbackup/workspace
++ echo 'Cleaning Completed'
+Cleaning Completed
++ echo 'Restoring backup 2020-02-03-07:14:13'
+Restoring backup 2020-02-03-07:14:13
++ sudo cp -af /backup/2020-02-03-07:14:13/com.cloudbees.hudson.plugins.folder.config.AbstractFolderConfiguration.xml /backup/2020-02-03-07:14:13/config.xml /backup/2020-02-03-07:14:13/github-plugin-configuration.xml /backup/2020-02-03-07:14:13/hudson.model.UpdateCenter.xml /backup/2020-02-03-07:14:13/hudson.plugins.build_timeout.operations.BuildStepOperation.xml /backup/2020-02-03-07:14:13/hudson.plugins.emailext.ExtendedEmailPublisher.xml /backup/2020-02-03-07:14:13/hudson.plugins.git.GitSCM.xml /backup/2020-02-03-07:14:13/hudson.plugins.git.GitTool.xml /backup/2020-02-03-07:14:13/hudson.plugins.timestamper.TimestamperConfig.xml /backup/2020-02-03-07:14:13/hudson.scm.SubversionSCM.xml /backup/2020-02-03-07:14:13/hudson.tasks.Mailer.xml /backup/2020-02-03-07:14:13/hudson.tasks.Shell.xml /backup/2020-02-03-07:14:13/hudson.triggers.SCMTrigger.xml /backup/2020-02-03-07:14:13/identity.key.enc /backup/2020-02-03-07:14:13/jenkins.install.InstallUtil.lastExecVersion /backup/2020-02-03-07:14:13/jenkins.install.UpgradeWizard.state /backup/2020-02-03-07:14:13/jenkins.model.ArtifactManagerConfiguration.xml /backup/2020-02-03-07:14:13/jenkins.model.JenkinsLocationConfiguration.xml /backup/2020-02-03-07:14:13/jenkins.security.ResourceDomainConfiguration.xml /backup/2020-02-03-07:14:13/jenkins.telemetry.Correlator.xml /backup/2020-02-03-07:14:13/jobs /backup/2020-02-03-07:14:13/logs /backup/2020-02-03-07:14:13/nodeMonitors.xml /backup/2020-02-03-07:14:13/nodes /backup/2020-02-03-07:14:13/org.jenkinsci.plugins.pipeline.modeldefinition.config.GlobalConfig.xml /backup/2020-02-03-07:14:13/org.jenkinsci.plugins.workflow.flow.GlobalDefaultFlowDurabilityLevel.xml /backup/2020-02-03-07:14:13/org.jenkinsci.plugins.workflow.libs.GlobalLibraries.xml /backup/2020-02-03-07:14:13/org.jenkins.plugins.lockableresources.LockableResourcesManager.xml /backup/2020-02-03-07:14:13/plugins /backup/2020-02-03-07:14:13/queue.xml /backup/2020-02-03-07:14:13/queue.xml.bak /backup/2020-02-03-07:14:13/scriptApproval.xml /backup/2020-02-03-07:14:13/secret.key /backup/2020-02-03-07:14:13/secret.key.not-so-secret /backup/2020-02-03-07:14:13/secrets /backup/2020-02-03-07:14:13/updates /backup/2020-02-03-07:14:13/userContent /backup/2020-02-03-07:14:13/users /backup/2020-02-03-07:14:13/workflow-libs /backup/2020-02-03-07:14:13/workspace /mnt/jenkinsbackup/
++ echo 'Restoring Done'
+Restoring Done
+[RestoreBackup] $ /bin/sh -xe /tmp/jenkins7938725830987270466.sh
++ ssh demjenkins123@10.160.0.16 'sudo systemctl restart jenkins'
+[RestoreBackup] $ /bin/sh -xe /tmp/jenkins5255125224950115595.sh
++ count=0
++ '[' 0 -ne 6 ']'
+++ curl -s -o /dev/null -w '%{http_code}\n' -u admin:11dbce11c7d2c4ad4c69b228ebaedd089d http://34.93.183.234/
++ response=503
++ echo 'Status: 503'
+Status: 503
++ '[' 503 '!=' 200 ']'
++ sleep 5
+++ expr 0 + 1
++ count=1
++ '[' 1 -ne 6 ']'
+++ curl -s -o /dev/null -w '%{http_code}\n' -u admin:11dbce11c7d2c4ad4c69b228ebaedd089d http://34.93.183.234/
++ response=503
++ echo 'Status: 503'
+Status: 503
++ '[' 503 '!=' 200 ']'
++ sleep 5
+++ expr 1 + 1
++ count=2
++ '[' 2 -ne 6 ']'
+++ curl -s -o /dev/null -w '%{http_code}\n' -u admin:11dbce11c7d2c4ad4c69b228ebaedd089d http://34.93.183.234/
++ response=503
++ echo 'Status: 503'
+Status: 503
++ '[' 503 '!=' 200 ']'
++ sleep 5
+++ expr 2 + 1
++ count=3
++ '[' 3 -ne 6 ']'
+++ curl -s -o /dev/null -w '%{http_code}\n' -u admin:11dbce11c7d2c4ad4c69b228ebaedd089d http://34.93.183.234/
++ response=503
++ echo 'Status: 503'
+Status: 503
++ '[' 503 '!=' 200 ']'
++ sleep 5
+++ expr 3 + 1
++ count=4
++ '[' 4 -ne 6 ']'
+++ curl -s -o /dev/null -w '%{http_code}\n' -u admin:11dbce11c7d2c4ad4c69b228ebaedd089d http://34.93.183.234/
++ response=200
++ echo 'Status: 200'
+Status: 200
++ '[' 200 '!=' 200 ']'
++ break
++ echo 4
+4
++ '[' 4 -eq 6 ']'
+Triggering a new build of [8mha:////4FniDl9ymXlCN0FyZrZpJ+48l4jygF7bjyU0dHB5/n8YAAAAmx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyuEgYB/az8JP3knEwgVZJaXKIPACHphfnFAAAA[0mclijobtest
+Finished: SUCCESS

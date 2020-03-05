@@ -1,0 +1,17 @@
+Started by upstream project "[8mha:////4DmVMgMEGJsBcCGgk7RfAw1/3fc+vHbYAie0iVkc3jz7AAAAnx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzeEgZh/az8JP2g1OKS/KJUp8Tk7NICfQCC5+TuyAAAAA==[0mRestoreBackup" build number [8mha:////4P35hGM03Xnl8B+91bYVvaCzG4BOWV0143Q7CuaQoyMwAAAAoR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAymEgZR/az8JP2g1OKS/KJUp8Tk7NICfSNzAOi1ZbPKAAAA[0m27
+originally caused by:
+ Started by user [8mha:////4Nw2w4KL9NeMiRb1nl0H9jz7+tOgqAKaQPnG6rMPhAH0AAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/clijobtest
+[WS-CLEANUP] Deleting project workspace...
+[WS-CLEANUP] Deferred wipeout is used...
+[WS-CLEANUP] Done
+[clijobtest] $ /bin/sh -xe /tmp/jenkins8539736002293906272.sh
++ wget http://34.93.183.234/jnlpJars/jenkins-cli.jar
+--2020-01-30 09:33:46--  http://34.93.183.234/jnlpJars/jenkins-cli.jar
+Connecting to 34.93.183.234:80... connected.
+HTTP request sent, awaiting response... 503 Service Unavailable
+2020-01-30 09:33:54 ERROR 503: Service Unavailable.
+
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE

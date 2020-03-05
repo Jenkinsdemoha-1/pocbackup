@@ -1,0 +1,120 @@
+Started by user [8mha:////4Nw2w4KL9NeMiRb1nl0H9jz7+tOgqAKaQPnG6rMPhAH0AAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/Backup
+[Backup] $ /bin/sh -xe /tmp/jenkins6397611523715442009.sh
++ echo Taking Backup to Test Jenkins
+Taking Backup to Test Jenkins
++ ssh jenkinsdemoha@104.197.197.188
+Pseudo-terminal will not be allocated because stdin is not a terminal.
+Linux haproxy 4.9.0-12-amd64 #1 SMP Debian 4.9.210-1 (2020-01-20) x86_64
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+[Backup] $ /bin/sh /tmp/jenkins6869099633443820207.sh
+======================Checking Status of Test JENKINS.....=====================
+2
+======================JENKINS server is UP===========================
+[Backup] $ /bin/sh -xe /tmp/jenkins8808269820610969199.sh
++ wget http://104.197.197.188:8080/jnlpJars/jenkins-cli.jar
+--2020-03-05 05:42:25--  http://104.197.197.188:8080/jnlpJars/jenkins-cli.jar
+Connecting to 104.197.197.188:8080... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 3625094 (3.5M) [application/java-archive]
+Saving to: ‘jenkins-cli.jar.12’
+
+     0K .......... .......... .......... .......... ..........  1% 33.0M 0s
+    50K .......... .......... .......... .......... ..........  2% 54.3M 0s
+   100K .......... .......... .......... .......... ..........  4% 55.6M 0s
+   150K .......... .......... .......... .......... ..........  5% 56.3M 0s
+   200K .......... .......... .......... .......... ..........  7% 48.0M 0s
+   250K .......... .......... .......... .......... ..........  8% 57.7M 0s
+   300K .......... .......... .......... .......... ..........  9% 55.8M 0s
+   350K .......... .......... .......... .......... .......... 11% 66.9M 0s
+   400K .......... .......... .......... .......... .......... 12%  319M 0s
+   450K .......... .......... .......... .......... .......... 14%  419M 0s
+   500K .......... .......... .......... .......... .......... 15%  202M 0s
+   550K .......... .......... .......... .......... .......... 16%  407M 0s
+   600K .......... .......... .......... .......... .......... 18% 61.1M 0s
+   650K .......... .......... .......... .......... .......... 19% 58.3M 0s
+   700K .......... .......... .......... .......... .......... 21% 58.3M 0s
+   750K .......... .......... .......... .......... .......... 22%  144M 0s
+   800K .......... .......... .......... .......... .......... 24%  364M 0s
+   850K .......... .......... .......... .......... .......... 25%  410M 0s
+   900K .......... .......... .......... .......... .......... 26%  420M 0s
+   950K .......... .......... .......... .......... .......... 28% 9.70M 0s
+  1000K .......... .......... .......... .......... .......... 29% 52.4M 0s
+  1050K .......... .......... .......... .......... .......... 31% 48.6M 0s
+  1100K .......... .......... .......... .......... .......... 32%  213M 0s
+  1150K .......... .......... .......... .......... .......... 33%  384M 0s
+  1200K .......... .......... .......... .......... .......... 35%  137M 0s
+  1250K .......... .......... .......... .......... .......... 36%  122M 0s
+  1300K .......... .......... .......... .......... .......... 38%  154M 0s
+  1350K .......... .......... .......... .......... .......... 39%  152M 0s
+  1400K .......... .......... .......... .......... .......... 40% 54.3M 0s
+  1450K .......... .......... .......... .......... .......... 42% 41.6M 0s
+  1500K .......... .......... .......... .......... .......... 43% 32.0M 0s
+  1550K .......... .......... .......... .......... .......... 45% 39.4M 0s
+  1600K .......... .......... .......... .......... .......... 46% 48.3M 0s
+  1650K .......... .......... .......... .......... .......... 48% 48.0M 0s
+  1700K .......... .......... .......... .......... .......... 49% 49.9M 0s
+  1750K .......... .......... .......... .......... .......... 50% 42.9M 0s
+  1800K .......... .......... .......... .......... .......... 52% 50.5M 0s
+  1850K .......... .......... .......... .......... .......... 53% 50.5M 0s
+  1900K .......... .......... .......... .......... .......... 55% 16.2M 0s
+  1950K .......... .......... .......... .......... .......... 56% 33.8M 0s
+  2000K .......... .......... .......... .......... .......... 57% 36.7M 0s
+  2050K .......... .......... .......... .......... .......... 59% 34.5M 0s
+  2100K .......... .......... .......... .......... .......... 60% 39.5M 0s
+  2150K .......... .......... .......... .......... .......... 62% 38.0M 0s
+  2200K .......... .......... .......... .......... .......... 63% 35.6M 0s
+  2250K .......... .......... .......... .......... .......... 64% 36.4M 0s
+  2300K .......... .......... .......... .......... .......... 66%  143M 0s
+  2350K .......... .......... .......... .......... .......... 67%  174M 0s
+  2400K .......... .......... .......... .......... .......... 69%  157M 0s
+  2450K .......... .......... .......... .......... .......... 70%  141M 0s
+  2500K .......... .......... .......... .......... .......... 72%  172M 0s
+  2550K .......... .......... .......... .......... .......... 73%  175M 0s
+  2600K .......... .......... .......... .......... .......... 74%  165M 0s
+  2650K .......... .......... .......... .......... .......... 76%  143M 0s
+  2700K .......... .......... .......... .......... .......... 77%  158M 0s
+  2750K .......... .......... .......... .......... .......... 79%  187M 0s
+  2800K .......... .......... .......... .......... .......... 80%  181M 0s
+  2850K .......... .......... .......... .......... .......... 81%  167M 0s
+  2900K .......... .......... .......... .......... .......... 83%  265M 0s
+  2950K .......... .......... .......... .......... .......... 84%  263M 0s
+  3000K .......... .......... .......... .......... .......... 86%  266M 0s
+  3050K .......... .......... .......... .......... .......... 87%  237M 0s
+  3100K .......... .......... .......... .......... .......... 88%  270M 0s
+  3150K .......... .......... .......... .......... .......... 90%  285M 0s
+  3200K .......... .......... .......... .......... .......... 91% 45.9M 0s
+  3250K .......... .......... .......... .......... .......... 93% 35.8M 0s
+  3300K .......... .......... .......... .......... .......... 94% 41.5M 0s
+  3350K .......... .......... .......... .......... .......... 96% 40.2M 0s
+  3400K .......... .......... .......... .......... .......... 97% 45.6M 0s
+  3450K .......... .......... .......... .......... .......... 98% 44.5M 0s
+  3500K .......... .......... .......... ..........           100% 46.5M=0.06s
+
+2020-03-05 05:42:25 (61.7 MB/s) - ‘jenkins-cli.jar.12’ saved [3625094/3625094]
+
++ java -jar jenkins-cli.jar -s http://104.197.197.188:8080/ -auth admin:11f10b8fd29e1c1f0fb14c7f1e74dbd158 build testingclitrigger -s
+Mar 05, 2020 5:42:25 AM org.apache.sshd.common.util.security.AbstractSecurityProviderRegistrar getOrCreateProvider
+INFO: getOrCreateProvider(EdDSA) created instance of net.i2p.crypto.eddsa.EdDSASecurityProvider
+Started testingclitrigger #16
+Completed testingclitrigger #16 : SUCCESS
++ echo Validation Complete
+Validation Complete
+[Backup] $ /bin/sh -xe /tmp/jenkins3767488635669218338.sh
++ date +%Y-%m-%d-%T
++ time_stamp=2020-03-05-05:42:51
++ backuppath=/backup
++ mkdir -p /backup/2020-03-05-05:42:51
++ echo Backup folder created at /backup/2020-03-05-05:42:51
+Backup folder created at /backup/2020-03-05-05:42:51
++ sudo cp -af /mnt/jenkinsbackup/com.cloudbees.hudson.plugins.folder.config.AbstractFolderConfiguration.xml /mnt/jenkinsbackup/credentials.xml /mnt/jenkinsbackup/fingerprints /mnt/jenkinsbackup/github-plugin-configuration.xml /mnt/jenkinsbackup/hudson.model.UpdateCenter.xml /mnt/jenkinsbackup/hudson.plugins.build_timeout.operations.BuildStepOperation.xml /mnt/jenkinsbackup/hudson.plugins.emailext.ExtendedEmailPublisher.xml /mnt/jenkinsbackup/hudson.plugins.git.GitSCM.xml /mnt/jenkinsbackup/hudson.plugins.git.GitTool.xml /mnt/jenkinsbackup/hudson.plugins.gradle.Gradle.xml /mnt/jenkinsbackup/hudson.plugins.timestamper.TimestamperConfig.xml /mnt/jenkinsbackup/hudson.scm.SubversionSCM.xml /mnt/jenkinsbackup/hudson.tasks.Ant.xml /mnt/jenkinsbackup/hudson.tasks.Mailer.xml /mnt/jenkinsbackup/hudson.tasks.Maven.xml /mnt/jenkinsbackup/hudson.tasks.Shell.xml /mnt/jenkinsbackup/hudson.triggers.SCMTrigger.xml /mnt/jenkinsbackup/identity.key.enc /mnt/jenkinsbackup/jenkins.install.InstallUtil.lastExecVersion /mnt/jenkinsbackup/jenkins.install.UpgradeWizard.state /mnt/jenkinsbackup/jenkins.model.ArtifactManagerConfiguration.xml /mnt/jenkinsbackup/jenkins.model.JenkinsLocationConfiguration.xml /mnt/jenkinsbackup/jenkins.mvn.GlobalMavenConfig.xml /mnt/jenkinsbackup/jenkins.security.ResourceDomainConfiguration.xml /mnt/jenkinsbackup/jenkins.telemetry.Correlator.xml /mnt/jenkinsbackup/jobs /mnt/jenkinsbackup/logs /mnt/jenkinsbackup/nodeMonitors.xml /mnt/jenkinsbackup/nodes /mnt/jenkinsbackup/org.jenkins.plugins.lockableresources.LockableResourcesManager.xml /mnt/jenkinsbackup/org.jenkinsci.plugins.docker.commons.tools.DockerTool.xml /mnt/jenkinsbackup/org.jenkinsci.plugins.gitclient.JGitApacheTool.xml /mnt/jenkinsbackup/org.jenkinsci.plugins.gitclient.JGitTool.xml /mnt/jenkinsbackup/org.jenkinsci.plugins.pipeline.modeldefinition.config.GlobalConfig.xml /mnt/jenkinsbackup/org.jenkinsci.plugins.resourcedisposer.AsyncResourceDisposer.xml /mnt/jenkinsbackup/org.jenkinsci.plugins.workflow.flow.GlobalDefaultFlowDurabilityLevel.xml /mnt/jenkinsbackup/org.jenkinsci.plugins.workflow.libs.GlobalLibraries.xml /mnt/jenkinsbackup/plugins /mnt/jenkinsbackup/queue.xml.bak /mnt/jenkinsbackup/scriptApproval.xml /mnt/jenkinsbackup/secret.key /mnt/jenkinsbackup/secret.key.not-so-secret /mnt/jenkinsbackup/secrets /mnt/jenkinsbackup/updates /mnt/jenkinsbackup/userContent /mnt/jenkinsbackup/users /mnt/jenkinsbackup/workflow-libs /mnt/jenkinsbackup/workspace /backup/2020-03-05-05:42:51/
++ echo Backup Completed
+Backup Completed
+Finished: SUCCESS

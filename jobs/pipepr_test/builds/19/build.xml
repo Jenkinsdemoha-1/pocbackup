@@ -1,0 +1,127 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<flow-build plugin="workflow-job@2.36">
+  <actions>
+    <hudson.model.ParametersAction>
+      <safeParameters class="sorted-set"/>
+      <parameters>
+        <hudson.model.StringParameterValue>
+          <name>Repo</name>
+          <description></description>
+          <value>jenkinspr</value>
+        </hudson.model.StringParameterValue>
+        <hudson.model.StringParameterValue>
+          <name>commitid</name>
+          <description></description>
+          <value>45f5c3b59f77f6ecb09345dfd5d1417479841b9a</value>
+        </hudson.model.StringParameterValue>
+        <hudson.model.StringParameterValue>
+          <name>pr</name>
+          <description></description>
+          <value>3</value>
+        </hudson.model.StringParameterValue>
+        <hudson.model.StringParameterValue>
+          <name>branch</name>
+          <description></description>
+          <value>testingpr</value>
+        </hudson.model.StringParameterValue>
+      </parameters>
+      <parameterDefinitionNames>
+        <string>Repo</string>
+        <string>commitid</string>
+        <string>pr</string>
+        <string>branch</string>
+      </parameterDefinitionNames>
+    </hudson.model.ParametersAction>
+    <hudson.model.CauseAction>
+      <causeBag class="linked-hash-map">
+        <entry>
+          <hudson.model.Cause_-RemoteCause>
+            <addr>35.223.53.23</addr>
+          </hudson.model.Cause_-RemoteCause>
+          <int>1</int>
+        </entry>
+      </causeBag>
+    </hudson.model.CauseAction>
+    <org.jenkinsci.plugins.workflow.libs.LibrariesAction plugin="workflow-cps-global-lib@2.15">
+      <libraries/>
+    </org.jenkinsci.plugins.workflow.libs.LibrariesAction>
+    <org.jenkinsci.plugins.workflow.cps.EnvActionImpl plugin="workflow-cps@2.78">
+      <env class="tree-map">
+        <entry>
+          <string>pr</string>
+          <string>3</string>
+        </entry>
+      </env>
+    </org.jenkinsci.plugins.workflow.cps.EnvActionImpl>
+  </actions>
+  <queueId>68</queueId>
+  <timestamp>1579620502703</timestamp>
+  <startTime>1579620502707</startTime>
+  <result>FAILURE</result>
+  <duration>1107</duration>
+  <charset>UTF-8</charset>
+  <keepLog>false</keepLog>
+  <execution class="org.jenkinsci.plugins.workflow.cps.CpsFlowExecution">
+    <result>FAILURE</result>
+    <script>import groovy.json.JsonSlurper
+node(){
+    print pr
+    env.pr=pr
+    print commitid
+    print repo
+    print branch
+    //http://35.223.53.23:7990/rest/api/latest/projects/DEM/repos/jenkinspr/pull-requests/1/changes
+    def json = sh label: &apos;&apos;, returnStdout: true, 
+                script: &apos;&apos;&apos;json=$(curl -k -u admin:admin http://35.223.53.23:7990/rest/api/latest/projects/DEM/repos/jenkinspr/pull-requests/$pr/changes)
+                echo &quot;$json&quot;&apos;&apos;&apos;
+    def slurper = new JsonSlurper()
+    def result = slurper.parseText(json)
+    def list = result.get(&quot;values&quot;)
+    def list_files= []
+    //print list
+    for (int i=0;i&lt;list.size();i++){
+        def val = list[i].get(&quot;path&quot;)
+        if(!list_files.contains(val.get(&quot;toString&quot;)))
+            list_files.add(val.get(&quot;toString&quot;))
+    }
+    
+    print &quot;===============================================&quot;
+    print list_files
+    stage(&apos;Checkout&apos;){
+        //git branch: $branch, changelog: false, credentialsId: &apos;36686a20-adb7-47ac-999f-4e5c2d9a3dbe&apos;, poll: false, url: &quot;http://35.223.53.23:7990/scm/dem/$repo.git&quot;
+        checkout changelog: false, poll: false, scm: [$class: &apos;GitSCM&apos;, branches: [[name: &quot;branch&quot;]], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: &apos;36686a20-adb7-47ac-999f-4e5c2d9a3dbe&apos;, url: &quot;http://35.223.53.23:7990/scm/dem/$repo.git&quot;]]]
+    }
+    }</script>
+    <loadedScripts class="map"/>
+    <durabilityHint>MAX_SURVIVABILITY</durabilityHint>
+    <timings class="map">
+      <entry>
+        <string>flowNode</string>
+        <long>156417134</long>
+      </entry>
+      <entry>
+        <string>classLoad</string>
+        <long>10248422</long>
+      </entry>
+      <entry>
+        <string>run</string>
+        <long>255996276</long>
+      </entry>
+      <entry>
+        <string>parse</string>
+        <long>27010869</long>
+      </entry>
+      <entry>
+        <string>saveProgram</string>
+        <long>19991821</long>
+      </entry>
+    </timings>
+    <sandbox>true</sandbox>
+    <iota>18</iota>
+    <head>1:18</head>
+    <done>true</done>
+    <resumeBlocked>false</resumeBlocked>
+  </execution>
+  <completed>true</completed>
+  <checkouts class="hudson.util.PersistedList"/>
+</flow-build>

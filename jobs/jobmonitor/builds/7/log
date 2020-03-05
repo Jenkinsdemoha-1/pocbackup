@@ -1,0 +1,10 @@
+Started by timer
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/jobmonitor
+[jobmonitor] $ /bin/sh -xe /tmp/jenkins2786646471123479671.sh
+++ curl -s -o /dev/null -w '%{http_code}\n' http://34.107.220.208/
++ response=200
++ echo 'Status: 200'
+Status: 200
++ '[' 200 '!=' 200 ']'
+Finished: SUCCESS

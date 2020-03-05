@@ -1,0 +1,52 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<org.jenkinsci.plugins.ghprb.GhprbTrigger_-DescriptorImpl plugin="ghprb@1.42.0">
+  <configVersion>1</configVersion>
+  <whitelistPhrase>.*add\W+to\W+whitelist.*</whitelistPhrase>
+  <okToTestPhrase>.*ok\W+to\W+test.*</okToTestPhrase>
+  <retestPhrase>.*test\W+this\W+please.*</retestPhrase>
+  <skipBuildPhrase>.*\[skip\W+ci\].*</skipBuildPhrase>
+  <blackListCommitAuthor></blackListCommitAuthor>
+  <cron>H/5 * * * *</cron>
+  <useComments>false</useComments>
+  <useDetailedComments>false</useDetailedComments>
+  <manageWebhooks>true</manageWebhooks>
+  <unstableAs>FAILURE</unstableAs>
+  <autoCloseFailedPullRequests>false</autoCloseFailedPullRequests>
+  <displayBuildErrorsOnDownstreamBuilds>false</displayBuildErrorsOnDownstreamBuilds>
+  <blackListLabels></blackListLabels>
+  <whiteListLabels></whiteListLabels>
+  <githubAuth>
+    <org.jenkinsci.plugins.ghprb.GhprbGitHubAuth>
+      <serverAPIUrl>https://api.github.com</serverAPIUrl>
+      <credentialsId>6440abc8-089a-462f-942c-ef1cdee90a15</credentialsId>
+      <id>abd66c1a-9acc-48a6-a611-cf920835eb5d</id>
+      <description>Anonymous connection</description>
+      <secret>{AQAAABAAAAAQbceXsBYg9TxKRoBrzI9dABrc/V1FZYWrjyWwu3yDb7c=}</secret>
+    </org.jenkinsci.plugins.ghprb.GhprbGitHubAuth>
+    <org.jenkinsci.plugins.ghprb.GhprbGitHubAuth>
+      <serverAPIUrl>https://api.github.com</serverAPIUrl>
+      <credentialsId>6440abc8-089a-462f-942c-ef1cdee90a15</credentialsId>
+      <id>db0e2089-e0d8-4777-b4b0-70004760cedb</id>
+      <description></description>
+      <secret>{AQAAABAAAAAQRJheIUfat2XWOKGKd1k/t1TCjADVQznMeJUJxuFK5q4=}</secret>
+    </org.jenkinsci.plugins.ghprb.GhprbGitHubAuth>
+    <org.jenkinsci.plugins.ghprb.GhprbGitHubAuth>
+      <serverAPIUrl>https://api.github.com</serverAPIUrl>
+      <credentialsId>36686a20-adb7-47ac-999f-4e5c2d9a3dbe</credentialsId>
+      <id>c226bdc9-4938-4a6f-ac3e-7ca7ccc33084</id>
+      <description></description>
+      <secret>{AQAAABAAAAAQ9j95rB4EKMdgv6raHCVaicLe/dVEVGjANFYl575n73Y=}</secret>
+    </org.jenkinsci.plugins.ghprb.GhprbGitHubAuth>
+  </githubAuth>
+  <adminlist></adminlist>
+  <requestForTestingPhrase>Can one of the admins verify this patch?</requestForTestingPhrase>
+  <extensions>
+    <org.jenkinsci.plugins.ghprb.extensions.status.GhprbSimpleStatus>
+      <commitStatusContext></commitStatusContext>
+      <triggeredStatus></triggeredStatus>
+      <startedStatus></startedStatus>
+      <statusUrl></statusUrl>
+      <addTestResults>false</addTestResults>
+    </org.jenkinsci.plugins.ghprb.extensions.status.GhprbSimpleStatus>
+  </extensions>
+</org.jenkinsci.plugins.ghprb.GhprbTrigger_-DescriptorImpl>

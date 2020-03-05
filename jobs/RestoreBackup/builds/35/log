@@ -1,0 +1,34 @@
+Started by user [8mha:////4Nw2w4KL9NeMiRb1nl0H9jz7+tOgqAKaQPnG6rMPhAH0AAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/RestoreBackup
+[RestoreBackup] $ /bin/sh -xe /tmp/jenkins6748042887239277514.sh
++ echo 'Cleaning jenkins'
+Cleaning jenkins
++ sudo rm -rf /mnt/jenkinsbackup/com.cloudbees.hudson.plugins.folder.config.AbstractFolderConfiguration.xml /mnt/jenkinsbackup/config.xml /mnt/jenkinsbackup/hudson.model.UpdateCenter.xml /mnt/jenkinsbackup/hudson.plugins.emailext.ExtendedEmailPublisher.xml /mnt/jenkinsbackup/hudson.plugins.git.GitTool.xml /mnt/jenkinsbackup/identity.key.enc /mnt/jenkinsbackup/jenkins.install.InstallUtil.lastExecVersion /mnt/jenkinsbackup/jenkins.install.UpgradeWizard.state /mnt/jenkinsbackup/jenkins.model.JenkinsLocationConfiguration.xml /mnt/jenkinsbackup/jenkins.telemetry.Correlator.xml /mnt/jenkinsbackup/jobs /mnt/jenkinsbackup/logs /mnt/jenkinsbackup/nodeMonitors.xml /mnt/jenkinsbackup/nodes /mnt/jenkinsbackup/plugins /mnt/jenkinsbackup/queue.xml.bak /mnt/jenkinsbackup/secret.key /mnt/jenkinsbackup/secret.key.not-so-secret /mnt/jenkinsbackup/secrets /mnt/jenkinsbackup/updates /mnt/jenkinsbackup/userContent /mnt/jenkinsbackup/users /mnt/jenkinsbackup/workflow-libs /mnt/jenkinsbackup/workspace
++ echo 'Cleaning Completed'
+Cleaning Completed
++ echo 'Restoring backup 2020-01-30-09:07:44'
+Restoring backup 2020-01-30-09:07:44
++ sudo cp -af /backup/2020-01-30-09:07:44/com.cloudbees.hudson.plugins.folder.config.AbstractFolderConfiguration.xml /backup/2020-01-30-09:07:44/config.xml /backup/2020-01-30-09:07:44/hudson.model.UpdateCenter.xml /backup/2020-01-30-09:07:44/hudson.plugins.emailext.ExtendedEmailPublisher.xml /backup/2020-01-30-09:07:44/hudson.plugins.git.GitTool.xml /backup/2020-01-30-09:07:44/identity.key.enc /backup/2020-01-30-09:07:44/jenkins.install.InstallUtil.lastExecVersion /backup/2020-01-30-09:07:44/jenkins.install.UpgradeWizard.state /backup/2020-01-30-09:07:44/jenkins.model.JenkinsLocationConfiguration.xml /backup/2020-01-30-09:07:44/jenkins.telemetry.Correlator.xml /backup/2020-01-30-09:07:44/jobs /backup/2020-01-30-09:07:44/logs /backup/2020-01-30-09:07:44/nodeMonitors.xml /backup/2020-01-30-09:07:44/nodes /backup/2020-01-30-09:07:44/plugins /backup/2020-01-30-09:07:44/queue.xml.bak /backup/2020-01-30-09:07:44/secret.key /backup/2020-01-30-09:07:44/secret.key.not-so-secret /backup/2020-01-30-09:07:44/secrets /backup/2020-01-30-09:07:44/updates /backup/2020-01-30-09:07:44/userContent /backup/2020-01-30-09:07:44/users /backup/2020-01-30-09:07:44/workflow-libs /backup/2020-01-30-09:07:44/workspace /mnt/jenkinsbackup/
++ echo 'Restoring Done'
+Restoring Done
+[RestoreBackup] $ /bin/sh -xe /tmp/jenkins6902712191109828534.sh
++ ssh demjenkins123@10.160.0.16 'sudo systemctl restart jenkins'
+[RestoreBackup] $ /bin/sh -xe /tmp/jenkins7425658338304253858.sh
++ count=0
++ '[' 0 -ne 6 ']'
+++ curl -s -o /dev/null -w '%{http_code}\n' -u admin:11dbce11c7d2c4ad4c69b228ebaedd089d http://34.93.183.234/
++ response=503
++ echo 'Status: 503'
+Status: 503
++ '[' 503 '!=' 200 ']'
++ sleep 5
++ count=0+1
++ '[' 0+1 -ne 6 ']'
+/tmp/jenkins7425658338304253858.sh: line 3: [: 0+1: integer expression expected
++ echo 0+1
+0+1
++ '[' 0+1 -eq 6 ']'
+/tmp/jenkins7425658338304253858.sh: line 16: [: 0+1: integer expression expected
+Triggering a new build of [8mha:////4FniDl9ymXlCN0FyZrZpJ+48l4jygF7bjyU0dHB5/n8YAAAAmx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyuEgYB/az8JP3knEwgVZJaXKIPACHphfnFAAAA[0mclijobtest
+Finished: SUCCESS

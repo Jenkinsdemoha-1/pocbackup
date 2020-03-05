@@ -1,0 +1,70 @@
+Started by user [8mha:////4Nw2w4KL9NeMiRb1nl0H9jz7+tOgqAKaQPnG6rMPhAH0AAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/RestoreBackup
+[RestoreBackup] $ /bin/sh -xe /tmp/jenkins5848879900038737083.sh
++ sudo crontab -l
+* * * * * /opt/test.sh
++ sudo crontab -r
++ echo Cleaning jenkins
+Cleaning jenkins
++ sudo rm -rf /mnt/jenkinsbackup/logs /mnt/jenkinsbackup/plugins
++ echo Cleaning Completed
+Cleaning Completed
++ echo Restoring backup 2020-03-05-05:40:41
+Restoring backup 2020-03-05-05:40:41
++ sudo cp -af /backup/2020-03-05-05:40:41/com.cloudbees.hudson.plugins.folder.config.AbstractFolderConfiguration.xml /backup/2020-03-05-05:40:41/config.xml /backup/2020-03-05-05:40:41/credentials.xml /backup/2020-03-05-05:40:41/fingerprints /backup/2020-03-05-05:40:41/github-plugin-configuration.xml /backup/2020-03-05-05:40:41/hudson.model.UpdateCenter.xml /backup/2020-03-05-05:40:41/hudson.plugins.build_timeout.operations.BuildStepOperation.xml /backup/2020-03-05-05:40:41/hudson.plugins.emailext.ExtendedEmailPublisher.xml /backup/2020-03-05-05:40:41/hudson.plugins.git.GitSCM.xml /backup/2020-03-05-05:40:41/hudson.plugins.git.GitTool.xml /backup/2020-03-05-05:40:41/hudson.plugins.gradle.Gradle.xml /backup/2020-03-05-05:40:41/hudson.plugins.timestamper.TimestamperConfig.xml /backup/2020-03-05-05:40:41/hudson.scm.SubversionSCM.xml /backup/2020-03-05-05:40:41/hudson.tasks.Ant.xml /backup/2020-03-05-05:40:41/hudson.tasks.Mailer.xml /backup/2020-03-05-05:40:41/hudson.tasks.Maven.xml /backup/2020-03-05-05:40:41/hudson.tasks.Shell.xml /backup/2020-03-05-05:40:41/hudson.triggers.SCMTrigger.xml /backup/2020-03-05-05:40:41/identity.key.enc /backup/2020-03-05-05:40:41/jenkins.install.InstallUtil.lastExecVersion /backup/2020-03-05-05:40:41/jenkins.install.UpgradeWizard.state /backup/2020-03-05-05:40:41/jenkins.model.ArtifactManagerConfiguration.xml /backup/2020-03-05-05:40:41/jenkins.model.JenkinsLocationConfiguration.xml /backup/2020-03-05-05:40:41/jenkins.mvn.GlobalMavenConfig.xml /backup/2020-03-05-05:40:41/jenkins.security.ResourceDomainConfiguration.xml /backup/2020-03-05-05:40:41/jenkins.telemetry.Correlator.xml /backup/2020-03-05-05:40:41/jobs /backup/2020-03-05-05:40:41/logs /backup/2020-03-05-05:40:41/nodeMonitors.xml /backup/2020-03-05-05:40:41/nodes /backup/2020-03-05-05:40:41/org.jenkins.plugins.lockableresources.LockableResourcesManager.xml /backup/2020-03-05-05:40:41/org.jenkinsci.plugins.docker.commons.tools.DockerTool.xml /backup/2020-03-05-05:40:41/org.jenkinsci.plugins.gitclient.JGitApacheTool.xml /backup/2020-03-05-05:40:41/org.jenkinsci.plugins.gitclient.JGitTool.xml /backup/2020-03-05-05:40:41/org.jenkinsci.plugins.pipeline.modeldefinition.config.GlobalConfig.xml /backup/2020-03-05-05:40:41/org.jenkinsci.plugins.resourcedisposer.AsyncResourceDisposer.xml /backup/2020-03-05-05:40:41/org.jenkinsci.plugins.workflow.flow.GlobalDefaultFlowDurabilityLevel.xml /backup/2020-03-05-05:40:41/org.jenkinsci.plugins.workflow.libs.GlobalLibraries.xml /backup/2020-03-05-05:40:41/plugins /backup/2020-03-05-05:40:41/queue.xml.bak /backup/2020-03-05-05:40:41/scriptApproval.xml /backup/2020-03-05-05:40:41/secret.key /backup/2020-03-05-05:40:41/secret.key.not-so-secret /backup/2020-03-05-05:40:41/secrets /backup/2020-03-05-05:40:41/updates /backup/2020-03-05-05:40:41/userContent /backup/2020-03-05-05:40:41/users /backup/2020-03-05-05:40:41/workflow-libs /backup/2020-03-05-05:40:41/workspace /mnt/jenkinsbackup/
++ echo Restoring Done
+Restoring Done
+[RestoreBackup] $ /bin/sh /tmp/jenkins6820124170169803082.sh
+[RestoreBackup] $ /bin/sh -xe /tmp/jenkins3060744788466013265.sh
++ echo ======================Checking Status of JENKINS.....=====================
+======================Checking Status of JENKINS.....=====================
++ count=0
++ [ 0 -ne 6 ]
++ curl -s -o /dev/null -w %{http_code}\n -u admin:11f10b8fd29e1c1f0fb14c7f1e74dbd158 http://104.197.197.188/
++ response=503
++ echo Status: 503
+Status: 503
++ [ 503 != 200 ]
++ sleep 5
++ expr 0 + 1
++ count=1
++ [ 1 -ne 6 ]
++ curl -s -o /dev/null -w %{http_code}\n -u admin:11f10b8fd29e1c1f0fb14c7f1e74dbd158 http://104.197.197.188/
++ response=503
++ echo Status: 503
+Status: 503
++ [ 503 != 200 ]
++ sleep 5
++ expr 1 + 1
++ count=2
++ [ 2 -ne 6 ]
++ curl -s -o /dev/null -w %{http_code}\n -u admin:11f10b8fd29e1c1f0fb14c7f1e74dbd158 http://104.197.197.188/
++ response=503
++ echo Status: 503
+Status: 503
++ [ 503 != 200 ]
++ sleep 5
++ expr 2 + 1
++ count=3
++ [ 3 -ne 6 ]
++ curl -s -o /dev/null -w %{http_code}\n -u admin:11f10b8fd29e1c1f0fb14c7f1e74dbd158 http://104.197.197.188/
++ response=200
++ echo Status: 200
+Status: 200
++ [ 200 != 200 ]
++ break
++ echo 3
+3
++ [ 3 -eq 6 ]
++ echo ======================JENKINS server is UP===========================
+======================JENKINS server is UP===========================
+Waiting for the completion of [8mha:////4K4lr+F340Q7x0f80icVhT7hFxcS+DGBMdLuUnzXOKOGAAAAjx+LCAAAAAAAAP9b85aBtbiIQSajNKU4P08vOT+vOD8nVc+jsiC1KCczL9svvyTVzHb1RttJBUeZGJg8GdhyUvPSSzJ8GJhLi3JKGIR8shLLEvVzEvPS9YNLijLz0q0rihik0IxzhtAgwxgggJGJgaGiAMjgKmEQ0M/KT9JPzskEUiWpxSX6AMGjekGVAAAA[0mclijobtest
+[8mha:////4Fh9O4XlutAQPdcFwNZxxPsoSRhAQ4h+mODLCgxahn8XAAAAkh+LCAAAAAAAAP9b85aBtbiIQSajNKU4P08vOT+vOD8nVc+jsiC1KCczL9svvyTVzHb1RttJBUeZGJg8GdhyUvPSSzJ8GJhLi3JKGIR8shLLEvVzEvPS9YNLijLz0q0rihik0IxzhtAgwxgggJGJgaGiAMjgK2EQ1s/KT9JPzskEUiWpxSX6xmb6AJBJw/GYAAAA[0mclijobtest #36 started.
+[8mha:////4Fh9O4XlutAQPdcFwNZxxPsoSRhAQ4h+mODLCgxahn8XAAAAkh+LCAAAAAAAAP9b85aBtbiIQSajNKU4P08vOT+vOD8nVc+jsiC1KCczL9svvyTVzHb1RttJBUeZGJg8GdhyUvPSSzJ8GJhLi3JKGIR8shLLEvVzEvPS9YNLijLz0q0rihik0IxzhtAgwxgggJGJgaGiAMjgK2EQ1s/KT9JPzskEUiWpxSX6xmb6AJBJw/GYAAAA[0mclijobtest #36 completed. Result was SUCCESS
+Build step 'Trigger/call builds on other projects' changed build result to SUCCESS
+[RestoreBackup] $ /bin/sh -xe /tmp/jenkins8010509978345478841.sh
++ sudo crontab /opt/cron.txt
++ sudo crontab -l
+* * * * * /opt/test.sh
+Finished: SUCCESS

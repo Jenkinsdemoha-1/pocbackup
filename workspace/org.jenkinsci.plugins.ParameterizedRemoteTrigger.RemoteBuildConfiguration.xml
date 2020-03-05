@@ -1,0 +1,16 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<org.jenkinsci.plugins.ParameterizedRemoteTrigger.RemoteBuildConfiguration_-DescriptorImpl plugin="Parameterized-Remote-Trigger@3.1.1">
+  <remoteSites>
+    <org.jenkinsci.plugins.ParameterizedRemoteTrigger.RemoteJenkinsServer>
+      <displayName>RemoteJenkins</displayName>
+      <hasBuildTokenRootSupport>true</hasBuildTokenRootSupport>
+      <trustAllCertificates>true</trustAllCertificates>
+      <overrideTrustAllCertificates>false</overrideTrustAllCertificates>
+      <auth2 class="org.jenkinsci.plugins.ParameterizedRemoteTrigger.auth2.CredentialsAuth">
+        <credentials>36160c8d-fa61-48aa-8f2f-52dc4117d2b2</credentials>
+      </auth2>
+      <address>https://35.238.120.231:8080/jenkins</address>
+      <useProxy>true</useProxy>
+    </org.jenkinsci.plugins.ParameterizedRemoteTrigger.RemoteJenkinsServer>
+  </remoteSites>
+</org.jenkinsci.plugins.ParameterizedRemoteTrigger.RemoteBuildConfiguration_-DescriptorImpl>

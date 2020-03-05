@@ -1,0 +1,19 @@
+Started by user [8mha:////4Nw2w4KL9NeMiRb1nl0H9jz7+tOgqAKaQPnG6rMPhAH0AAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/triggerjob
+################################################################################################################
+  Parameterized Remote Trigger Configuration:
+    - job:                     test 
+    - remoteJenkinsName:       RemoteJenkins
+    - parameters:              [NAME=test]
+    - blockBuildUntilComplete: false
+    - connectionRetryLimit:    5
+    - trustAllCertificates:    false
+################################################################################################################
+Triggering non-parameterized remote job 'http://35.238.120.231:8080/job/test'
+  Using globally defined 'Credentials Authentication' as user 'jenkins2' (Credentials ID '36160c8d-fa61-48aa-8f2f-52dc4117d2b2')
+Triggering remote job now.
+CSRF protection is enabled on the remote server.
+ERROR: Remote build failed with 'ExceedRetryLimitException' for the following reason: 'Max number of connection retries have been exeeded.'.
+ERROR: ExceedRetryLimitException: Max number of connection retries have been exeeded.
+Finished: FAILURE
